@@ -4,6 +4,7 @@
 set -e
 
 # build
+npm run iconfont
 npm run docs:build
 
 # navigate into the build output directory

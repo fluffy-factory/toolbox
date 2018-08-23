@@ -12,7 +12,7 @@ const config = {
   filesType: '.svg',
   output: {
     scss: 'src/scss/typography/_iconfont.scss',
-    dir: 'dist/fonts'
+    dir: './docs/.vuepress/public/fonts'
   },
   fontName: 'icon',
   baseSelector: '.icon',
@@ -50,7 +50,7 @@ webfontsGenerator({
   files: iconsFiles,
   types: ['eot', 'woff', 'ttf', 'svg'],
   dest: config.output.dir,
-  cssFontsUrl: '/fonts',
+  cssFontsUrl: '/toolbox/fonts/',
   cssTemplate: 'bin/iconfont/template.hbs',
   cssDest: config.output.scss,
   html: false,

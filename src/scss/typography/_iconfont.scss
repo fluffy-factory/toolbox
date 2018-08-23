@@ -1,9 +1,9 @@
 @font-face {
     font-family: "icon";
-    src: url("/fonts/icon.eot?430890918d574eb03a456c4a1e830744?#iefix") format("embedded-opentype"),
-url("/fonts/icon.woff?430890918d574eb03a456c4a1e830744") format("woff"),
-url("/fonts/icon.ttf?430890918d574eb03a456c4a1e830744") format("truetype"),
-url("/fonts/icon.svg?430890918d574eb03a456c4a1e830744#icon") format("svg");
+    src: url("/toolbox/fonts/icon.eot?849f3ac973540d2866c1318de0eafe2c?#iefix") format("embedded-opentype"),
+url("/toolbox/fonts/icon.woff?849f3ac973540d2866c1318de0eafe2c") format("woff"),
+url("/toolbox/fonts/icon.ttf?849f3ac973540d2866c1318de0eafe2c") format("truetype"),
+url("/toolbox/fonts/icon.svg?849f3ac973540d2866c1318de0eafe2c#icon") format("svg");
 }
 
 @if not variable-exists('webfont-icons') {
