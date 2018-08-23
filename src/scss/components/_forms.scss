@@ -1,0 +1,27 @@
+//=====================================================
+//  Labels
+//=====================================================
+$required-star-color: red;
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+label.is-required {
+  position: relative;
+  &:before {
+    content: '*';
+    vertical-align: super;
+    color: $required-star-color
+  }
+}
+
+.is-required {
+  position: relative;
+  &:before {
+    content: '*';
+    vertical-align: super;
+    color: $required-star-color;
+  }
+}

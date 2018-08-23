@@ -1,0 +1,10 @@
+/* Contrast gestion compared to a color
+  If $color is dark @return light color ...
+*/
+@function contrast($color, $colorLight: '#ffffff', $colorDark: '#000000') {
+  @if (lightness($color) > 70) {
+    @return unquote($colorDark);
+  } @else {
+    @return unquote($colorLight);
+  }
+}

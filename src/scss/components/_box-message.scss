@@ -1,0 +1,134 @@
+//=====================================================
+//  Box message
+//=====================================================
+$color-box-info: #3498db;
+$color-box-success: #65d269;
+$color-box-warning: #ff7a5a;
+$color-box-error: #ff374d;
+
+%box-info-icon {
+  @extend %icon-info;
+  font-family: $font-icon;
+}
+
+%box-success-icon {
+  @extend %icon-check-circle;
+  font-family: $font-icon;
+}
+
+%box-warning-icon {
+  @extend %icon-exclamation-triangle;
+  font-family: $font-icon;
+}
+
+%box-error-icon {
+  @extend %icon-exclamation-triangle;
+  font-family: $font-icon;
+}
+
+// (boxName, boxColor), (...)
+$boxes :
+  ('info', $color-box-info),
+  ('success', $color-box-success),
+  ('warning', $color-box-warning),
+  ('error', $color-box-error);
+
+// Propriétées communes aux box
+%box {
+  position: relative;
+  display: block;
+  padding: 20px 40px;
+  font-size: $font-size-base;
+  border-left: 4px solid;
+  background-color: $color-grey-light;
+  margin: 20px auto;
+  line-height: 1.5em;
+  max-width: 600px;
+
+  // Bubble
+  &:before {
+    font-family: $font-icon;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 10px;
+    left: -17px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: $color-white;
+  }
+
+  // Triangle
+  &:after {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 5px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 6px 0 6px;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    background-color: transparent;
+    transform: rotate(-55deg);
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@each $box in $boxes {
+
+  .box-#{nth($box, 1)} {
+    @extend %box;
+    border-color: nth($box,2);
+
+    @if nth($box, 1) == 'info' {
+      &:before {
+        @extend %box-info-icon;
+        background-color: nth($box, 2);
+      }
+      &:after {
+        border-top-color: nth($box, 2);
+      }
+    }
+
+    @if nth($box, 1) == 'success' {
+      &:before {
+        @extend %box-success-icon;
+        background-color: nth($box, 2);
+      }
+      &:after {
+        border-top-color: nth($box, 2);
+      }
+    }
+
+    @if nth($box, 1) == 'warning' {
+      &:before {
+        @extend %box-warning-icon;
+        background-color: nth($box, 2);
+      }
+      &:after {
+        border-top-color: nth($box, 2);
+      }
+    }
+
+    @if nth($box, 1) == 'error' {
+      &:before {
+        @extend %box-error-icon;
+        background-color: nth($box, 2);
+      }
+      &:after {
+        border-top-color: nth($box, 2);
+      }
+    }
+
+  }
+}

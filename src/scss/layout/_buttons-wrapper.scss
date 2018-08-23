@@ -1,0 +1,31 @@
+//=====================================================
+//  buttons wrapper
+//=====================================================
+.buttons_wrapper {
+  @include clearfix();
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  &.collapse {
+    clear: both;
+
+    a[class^="btn-"],
+    button[class^="btn-"],
+    input[class^="btn-"] {
+
+      &:first-of-type {
+        float: left;
+      }
+
+      &:first-of-type + * {
+        float: right;
+      }
+    }
+  }
+}

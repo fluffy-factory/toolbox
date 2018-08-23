@@ -1,0 +1,106 @@
+/*
+* Checkbox custom
+* The input tag must be before the label
+* Example :
+* <input type="checkbox" id="bar" name="test" value="foo">
+* <label for="bar">Bar</label>
+*/
+
+// layout
+$checkbox-width: 20px;
+$checkbox-height: 20px;
+$checkbox-label-margin-right: 10px;
+$checkbox-top: calc(50% - 10px);
+$checkbox-radius: 0;
+$checkbox-anim-duration: 300ms;
+// state: initial
+$checkbox-icon-size: 16px;
+$checkbox-bg-color: #f1f1f1;
+$checkbox-border-color: #CCC;
+$checkbox-text-color: #9e9e9e;
+// state: checked
+$checkbox-icon-size-checked: 16px;
+$checkbox-bg-color-checked: #498fff;
+$checkbox-border-color-checked: #498fff;
+$checkbox-text-color-checked: #ffffff;
+// state: disabled
+$checkbox-icon-size-disabled: 10px;
+$checkbox-bg-color-disabled: #f1f1f1;
+$checkbox-border-color-disabled: #CCC;
+$checkbox-text-color-disabled: #9e9e9e;
+
+%checkbox-icon-initial {
+  content: '•';
+}
+
+%checkbox-icon-checked {
+  content: '\2713';
+}
+
+%checkbox-icon-disabled {
+  content: '•';
+}
+
+// Hide the input
+input[type="checkbox"] {
+  display: none;
+}
+
+// Vertical align
+input[type="checkbox"] + label:before,
+input[type="checkbox"] + label {
+  vertical-align: middle;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  padding-left: $checkbox-width + 10;
+  margin-right: $checkbox-label-margin-right;
+  cursor: pointer;
+}
+
+// pseudo element
+input[type="checkbox"] + label:before {
+  @extend %checkbox-icon-initial;
+  font-size: $checkbox-icon-size;
+  text-align: center;
+  line-height: $checkbox-height;
+
+  color: $checkbox-text-color;
+  background-color: $checkbox-bg-color;
+  border: 1px solid $checkbox-border-color;
+  border-radius: $checkbox-radius;
+  
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: $checkbox-top;
+  width: $checkbox-width;
+  height: $checkbox-height;
+
+  transition-duration: $checkbox-anim-duration;
+}
+
+// Checked
+input[type="checkbox"]:checked + label:before {
+  @extend %checkbox-icon-checked;
+  font-size: $checkbox-icon-size-checked;
+  background-color: $checkbox-bg-color-checked;
+  border-color: $checkbox-border-color-checked;
+  color: $checkbox-text-color-checked;
+}
+
+// Disabled
+input[type="checkbox"]:disabled + label:before {
+  @extend %checkbox-icon-disabled;
+  font-size: $checkbox-icon-size-checked;
+  background-color: $checkbox-bg-color-disabled;
+  border-color: $checkbox-border-color-disabled;
+  color: $checkbox-text-color-disabled;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: $checkbox-text-color-disabled;
+  cursor: not-allowed;
+}

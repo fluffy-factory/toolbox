@@ -1,0 +1,52 @@
+//=====================================================
+//  Form error (symfony structure base <ul> <li> ...
+//=====================================================
+$form-error-bg-color: #FF374D;
+$form-error-color: #ffffff;
+
+%form-error-icon {
+  @extend %icon-exclamation-circle;
+  font-family: $font-icon;
+  position: absolute;
+  left: 13px;
+  top: 5px;
+}
+
+.form_error {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 0;
+  list-style-type: none;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    display: block;
+
+    // triangle
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: rgba($form-error-bg-color, 1) transparent transparent transparent;
+  }
+
+  li {
+    position: relative;
+    display: block;
+    text-align: left;
+    padding: 5px 10px 5px 40px;
+    color: $form-error-color;
+    background-color: $form-error-bg-color;
+
+    &:before {
+     @extend %form-error-icon;
+    }
+
+    & > * {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+$btn-color-disabled: #e7e7e7;
+$btn-color-primary: $color-primary;
+$btn-txt-color-primary: white;
+$btn-color-secondary: $color-secondary;
+$btn-txt-color-secondary: #2b2d56;
+$btn-transition-duration: 500ms;
+
+//=====================================================
+//  Reset
+//=====================================================
+%btn-reset {
+  border: 0;
+  appearance: none;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+a[class^="btn"] {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//=====================================================
+//  Base
+//=====================================================
+%btn-base {
+  @extend %btn-reset;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 20px;
+  margin-top: 5px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition-duration: $btn-transition-duration;
+
+  &:disabled,
+  &.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+}
+
+//=====================================================
+//  Mixin to generate the btn
+//=====================================================
+@mixin makeBtn ($name: '', $bg-color: black, $txt-color: white) {
+  .btn-#{unquote($name)} {
+    @extend %btn-base;
+    background-color: $bg-color;
+    color: $txt-color;
+    @content;
+  }
+}
+
+// Btn primary
+@include makeBtn('primary', $btn-color-primary, $btn-txt-color-primary) {
+  &:hover {
+    background-color: darken($btn-color-primary, 10%);
+    color: $btn-txt-color-primary;
+  }
+}
+
+// Btn secondary
+@include makeBtn('secondary', $btn-color-secondary, $btn-txt-color-secondary) {
+  &:hover {
+    background-color: darken($btn-color-secondary, 10%);
+    color: $btn-txt-color-secondary;
+  }
+}

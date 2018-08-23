@@ -1,0 +1,43 @@
+{
+  "name": "toolbox",
+  "version": "1.0.0",
+  "description": "Collection of SCSS components and JS scripts",
+  "main": "index.js",
+  "author": "Masth0",
+  "license": "MIT",
+  "scripts": {
+    "iconfont": "node bin/iconfont/iconfont.js",
+    "build": "node bin/iconfont & cross-env NODE_ENV=prod webpack && rimraf web/build/css/*.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.6",
+    "clean-webpack-plugin": "^0.1.19",
+    "concurrently": "^3.6.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "postcss-loader": "^2.1.6",
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "vuepress": "^0.13.0",
+    "webfonts-generator": "^0.4.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-manifest-plugin": "^2.0.3"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 11",
+    "safari >= 7"
+  ]
+}
