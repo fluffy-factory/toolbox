@@ -1,5 +1,6 @@
 module.exports = {
   port: 8080,
+  base: '/toolbox/',
   themeConfig: {
     navbar: false,
     sidebar: [
