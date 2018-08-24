@@ -2,27 +2,10 @@
     <div>
         <div class="bg-grey">
             <div class="grid grid-collapse">
-                <div class="col-s-6">
+                <div class="col-6">
                     <div></div>
                 </div>
-                <div class="col-s-6">
-                    <div></div>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="grid grid-collapse">
-                <div class="col-s-3">
-                    <div></div>
-                </div>
-                <div class="col-s-3">
-                    <div></div>
-                </div>
-                <div class="col-s-3">
-                    <div></div>
-                </div>
-                <div class="col-s-3">
+                <div class="col-6">
                     <div></div>
                 </div>
             </div>
@@ -30,16 +13,16 @@
             <br>
 
             <div class="grid grid-collapse">
-                <div class="col-s-4">
+                <div class="col-3">
                     <div></div>
                 </div>
-                <div class="col-s-2">
+                <div class="col-3">
                     <div></div>
                 </div>
-                <div class="col-s-2">
+                <div class="col-3">
                     <div></div>
                 </div>
-                <div class="col-s-4">
+                <div class="col-3">
                     <div></div>
                 </div>
             </div>
@@ -47,13 +30,30 @@
             <br>
 
             <div class="grid grid-collapse">
-                <div class="col-s-5">
+                <div class="col-4">
                     <div></div>
                 </div>
-                <div class="col-s-2">
+                <div class="col-2">
                     <div></div>
                 </div>
-                <div class="col-s-5">
+                <div class="col-2">
+                    <div></div>
+                </div>
+                <div class="col-4">
+                    <div></div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="grid grid-collapse">
+                <div class="col-5">
+                    <div></div>
+                </div>
+                <div class="col-2">
+                    <div></div>
+                </div>
+                <div class="col-5">
                     <div></div>
                 </div>
             </div>

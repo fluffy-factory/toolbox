@@ -3,31 +3,31 @@
         <div class="bg-grey">
 
             <div class="grid grid-collapse around">
-                <div class="col-s-4">
+                <div class="col-4">
                     <div>space-around</div>
                 </div>
-                <div class="col-s-3">
+                <div class="col-4">
                     <div>space-around</div>
                 </div>
             </div>
             <br>
             <div class="grid grid-collapse center">
-                <div class="col-s-3">
+                <div class="col-3">
                     <div>center</div>
                 </div>
-                <div class="col-s-3">
+                <div class="col-3">
                     <div>center</div>
                 </div>
-                <div class="col-s-3">
+                <div class="col-3">
                     <div>center</div>
                 </div>
             </div>
             <br>
             <div class="grid grid-collapse between">
-                <div class="col-s-3 first">
+                <div class="col-4 first">
                     <div>space-between</div>
                 </div>
-                <div class="col-s-3">
+                <div class="col-4">
                     <div>space-between</div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
 
     %col-element {
         border: 1px solid lighten($color-primary, 10%);
-        padding: 20px;
+        padding: 4px;
         background-color: $color-primary;
         color: $color-white;
         text-align: center;

@@ -55,16 +55,16 @@
     @media screen and (min-width: nth($breakpoint, 2)) {
       @for $i from 1 through $columns {
 
-        .#{$colSelector}-#{unquote(nth($breakpoint, 1))}-#{$i} {
+        .#{$colSelector}#{unquote(nth($breakpoint, 1))}-#{$i} {
           @include col();
           @include colSize($i, $columns);
         }
         // Push
-        .#{$colSelector}-push-#{unquote(nth($breakpoint, 1))}-#{$i} {
+        .#{$colSelector}-push#{unquote(nth($breakpoint, 1))}-#{$i} {
           @include colOffset($i, $columns);
         }
         // Pull
-        .#{$colSelector}-pull-#{unquote(nth($breakpoint, 1))}-#{$i} {
+        .#{$colSelector}-pull#{unquote(nth($breakpoint, 1))}-#{$i} {
           @include colOffset(-$i, $columns);
         }
 
@@ -104,5 +104,5 @@
   align-items: flex-end;
 }
 
-$grid-breakpoints: (('s', $screen-s), ('m', $screen-m), ('l', $screen-l), ('ml', $screen-ml));
+$grid-breakpoints: (('', 0), ('-s', $screen-s), ('-m', $screen-m), ('-l', $screen-l), ('-ml', $screen-ml));
 @include generateGrid('grid', 'col', 12, 20px, $grid-breakpoints);

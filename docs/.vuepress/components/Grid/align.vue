@@ -3,28 +3,28 @@
         <div class="bg-grey">
 
             <div class="grid grid-collapse top">
-                <div class="col-s-6 first">
+                <div class="col-6 first">
                     <div>top</div>
                 </div>
-                <div class="col-s-6">
+                <div class="col-6">
                     <div>top</div>
                 </div>
             </div>
             <br>
             <div class="grid grid-collapse middle">
-                <div class="col-s-6 first">
+                <div class="col-6 first">
                     <div>middle</div>
                 </div>
-                <div class="col-s-6">
+                <div class="col-6">
                     <div>middle</div>
                 </div>
             </div>
             <br>
             <div class="grid grid-collapse bottom">
-                <div class="col-s-6 first">
+                <div class="col-6 first">
                     <div>bottom</div>
                 </div>
-                <div class="col-s-6">
+                <div class="col-6">
                     <div>bottom</div>
                 </div>
             </div>
