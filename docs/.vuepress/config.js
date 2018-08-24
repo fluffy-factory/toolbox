@@ -13,6 +13,7 @@ module.exports = {
           '/modules/box-message',
           '/modules/buttons',
           '/modules/pagination',
+          '/modules/breadcrumb',
         ]
       },
       {
