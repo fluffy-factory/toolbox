@@ -6,13 +6,6 @@
   }
 }
 
-@mixin wrapper($size: 1440px, $margin: "0 auto", $padding-x: 0, $padding-y: 0) {
-  position: relative;
-  max-width: $size;
-  margin: unquote($margin);
-  padding: $padding-y $padding-x;
-}
-
 /*
 A simple little SCSS mixin for creating scrim gradients
 Inspired by Andreas Larson - https://github.com/larsenwork

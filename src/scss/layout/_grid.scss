@@ -1,0 +1,108 @@
+@mixin col () {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  flex-grow: 1;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+@mixin colSize ($index: 0, $context: 12) {
+  flex-basis: ($index / $context) * 100%;
+  max-width: ($index / $context) * 100%;
+}
+
+@mixin colOffset ($current: 0, $context: 12) {
+  position: relative;
+  left: ($current / $context) * 100%;
+}
+
+@mixin generateGrid ($gridSelector: 'grid', $colSelector: 'col', $columns: 12, $gutter: 20px, $breakpoints: '') {
+  // Wrapper
+  .wrapper-#{$gridSelector} {
+    padding-left: ($gutter / 2);
+    padding-right: ($gutter / 2);
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+
+  // Grid
+  .#{$gridSelector} {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & > * {
+      @include col();
+      padding-right: ($gutter / 2);
+      padding-left: ($gutter / 2);
+    }
+  }
+
+  // Collapse cols
+  .#{$gridSelector}-collapse {
+    @extend .#{$gridSelector};
+    margin-left: ($gutter / 2) * -1;
+    margin-right: ($gutter / 2) * -1;
+
+    & > * {
+      @include col();
+    }
+  }
+
+  // For each breakpoints
+  @each $breakpoint in $breakpoints {
+    @media screen and (min-width: nth($breakpoint, 2)) {
+      @for $i from 1 through $columns {
+
+        .#{$colSelector}-#{unquote(nth($breakpoint, 1))}-#{$i} {
+          @include col();
+          @include colSize($i, $columns);
+        }
+        // Push
+        .#{$colSelector}-push-#{unquote(nth($breakpoint, 1))}-#{$i} {
+          @include colOffset($i, $columns);
+        }
+        // Pull
+        .#{$colSelector}-pull-#{unquote(nth($breakpoint, 1))}-#{$i} {
+          @include colOffset(-$i, $columns);
+        }
+
+      }
+    }
+  }
+
+}
+
+//=====================================================
+//  Grids helpers
+//=====================================================
+.grid-start {
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.grid-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-end {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.col-top {
+  align-items: flex-start;
+}
+
+.col-middle {
+  align-items: center;
+}
+
+.col-bottom {
+  align-items: flex-end;
+}
+
+$grid-breakpoints: (('s', $screen-s), ('m', $screen-m), ('l', $screen-l), ('ml', $screen-ml));
+@include generateGrid('grid', 'col', 12, 20px, $grid-breakpoints);
