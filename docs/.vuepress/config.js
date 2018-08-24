@@ -15,6 +15,7 @@ module.exports = {
           '/modules/buttons',
           '/modules/pagination',
           '/modules/grid',
+          '/modules/breadcrumb',
         ]
       },
       {

@@ -1,0 +1,19 @@
+$breadcrumb-bg-color: #eeeeee;
+
+.nav-breadcrumb {
+  background-color: $breadcrumb-bg-color;
+}
+
+.breadcrumb {
+  @extend .list-reset;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  a {
+    display: block;
+    padding: 8px 10px;
+  }
+}
