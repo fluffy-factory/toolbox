@@ -3,8 +3,8 @@
         <p><strong>Collapse to each side</strong></p>
         <div class="bg-grey">
             <div class="buttons_wrapper collapse">
-                <a href="#" class="btn-secondary">button secondary</a>
-                <a href="#" class="btn-primary">button primary</a>
+                <a href="#" class="btn-secondary">secondary</a>
+                <a href="#" class="btn-primary">primary</a>
             </div>
         </div>
 
@@ -13,8 +13,8 @@
         <p><strong>Align center</strong></p>
         <div class="bg-grey">
             <div class="buttons_wrapper center">
-                <a href="#" class="btn-secondary">button secondary</a>
-                <a href="#" class="btn-primary">button primary</a>
+                <a href="#" class="btn-secondary">secondary</a>
+                <a href="#" class="btn-primary">primary</a>
             </div>
         </div>
 
@@ -23,8 +23,8 @@
         <p><strong>Align right</strong></p>
         <div class="bg-grey">
             <div class="buttons_wrapper right">
-                <a href="#" class="btn-secondary">button secondary</a>
-                <a href="#" class="btn-primary">button primary</a>
+                <a href="#" class="btn-secondary">secondary</a>
+                <a href="#" class="btn-primary">primary</a>
             </div>
         </div>
 
@@ -33,8 +33,8 @@
         <p><strong>Align left</strong></p>
         <div class="bg-grey">
             <div class="buttons_wrapper">
-                <a href="#" class="btn-secondary">button secondary</a>
-                <a href="#" class="btn-primary">button primary</a>
+                <a href="#" class="btn-secondary">secondary</a>
+                <a href="#" class="btn-primary">primary</a>
             </div>
         </div>
     </div>
@@ -50,5 +50,13 @@
 
     .bg-grey {
         background-color: $color-grey-light;
+    }
+
+    @media screen and (max-width: $screen-s) {
+        .btn-primary,
+        .btn-secondary,
+        .btn-animation {
+            margin: 10px 0;
+        }
     }
 </style>
