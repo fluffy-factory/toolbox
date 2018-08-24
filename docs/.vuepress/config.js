@@ -1,6 +1,7 @@
 module.exports = {
   port: 8088,
   base: '/toolbox/',
+  theme: '',
   configureWebpack: {
   },
   themeConfig: {

@@ -34,8 +34,8 @@ a[class^="btn"] {
   display: inline-block;
   vertical-align: middle;
   padding: 10px 20px;
-  margin-top: 5px;
   line-height: 1;
+  font-weight: normal;
   white-space: nowrap;
   cursor: pointer;
   transition-duration: $btn-transition-duration;
@@ -51,11 +51,45 @@ a[class^="btn"] {
 //=====================================================
 //  Mixin to generate the btn
 //=====================================================
-@mixin makeBtn ($name: '', $bg-color: black, $txt-color: white) {
+@mixin makeBtn ($name: '', $bg-color: black, $txt-color: white, $animated: false, $nb-letters: 0) {
   .btn-#{unquote($name)} {
     @extend %btn-base;
     background-color: $bg-color;
     color: $txt-color;
+
+    @if $animated and length($nb-letters) != 0 {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+
+      div {
+        span {
+          display: inline-block;
+          color: $txt-color;
+          transition: transform $btn-transition-duration $easeInOutCubic;
+
+          @for $i from 1 to $nb-letters {
+            &:nth-child(#{$i}) {
+              // Type, time, delay, easing
+              transition: transform 0.35s $i * 0.01s $easeInOutCubic;
+            }
+          }
+        }
+      }
+      div:last-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 10px 20px;
+        line-height: 1;
+        span {
+          transform: translateY(-36px);
+        }
+      }
+    }
+
     @content;
   }
 }
@@ -77,38 +111,7 @@ a[class^="btn"] {
 }
 
 // Btn animation
-@include makeBtn('animation', $btn-color-primary, $btn-txt-color-primary) {
-
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-
-  div {
-    span {
-      display: inline-block;
-      transition: transform $btn-transition-duration $easeInOutCubic;
-
-      @for $i from 1 to 100 {
-        &:nth-child(#{$i}) {
-          // Type, time, delay, easing
-          transition: transform 0.35s $i * 0.01s $easeInOutCubic;
-        }
-      }
-    }
-  }
-  div:last-child {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding: 10px 20px;
-    line-height: 1;
-    span {
-      transform: translateY(-36px);
-    }
-  }
-
+@include makeBtn('animation', $btn-color-primary, $btn-txt-color-primary, true, 100) {
   &:hover {
     div:first-child {
       span {
