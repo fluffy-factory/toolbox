@@ -23,7 +23,7 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "src/scss/utils/_variables.scss";
-    @import "src/scss/utils/_reboot.scss";
-    @import "src/scss/components/_pagination";
+    @import "src/scss/utils/_variables";
+    @import "src/scss/utils/_reboot";
+    @import "src/scss/components/pagination/_pagination-classic";
 </style>

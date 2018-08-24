@@ -1,9 +1,9 @@
 @font-face {
     font-family: "icon";
-    src: url("/toolbox/fonts/icon.eot?849f3ac973540d2866c1318de0eafe2c?#iefix") format("embedded-opentype"),
-url("/toolbox/fonts/icon.woff?849f3ac973540d2866c1318de0eafe2c") format("woff"),
-url("/toolbox/fonts/icon.ttf?849f3ac973540d2866c1318de0eafe2c") format("truetype"),
-url("/toolbox/fonts/icon.svg?849f3ac973540d2866c1318de0eafe2c#icon") format("svg");
+    src: url("/toolbox/fonts/icon.eot?96bb9a9d0b2bf3161c352e4f7e014374?#iefix") format("embedded-opentype"),
+url("/toolbox/fonts/icon.woff?96bb9a9d0b2bf3161c352e4f7e014374") format("woff"),
+url("/toolbox/fonts/icon.ttf?96bb9a9d0b2bf3161c352e4f7e014374") format("truetype"),
+url("/toolbox/fonts/icon.svg?96bb9a9d0b2bf3161c352e4f7e014374#icon") format("svg");
 }
 
 @if not variable-exists('webfont-icons') {
@@ -23,50 +23,52 @@ $webfont-icons: map-merge($webfont-icons, (
         'check-circle': ('icon' '\f10a'),
         'check': ('icon' '\f10b'),
         'chevron-down': ('icon' '\f10c'),
-        'chevron-left': ('icon' '\f10d'),
-        'chevron-right': ('icon' '\f10e'),
-        'chevron-up': ('icon' '\f10f'),
-        'circle-slash': ('icon' '\f110'),
-        'dash': ('icon' '\f111'),
-        'exclamation-circle': ('icon' '\f112'),
-        'exclamation-triangle': ('icon' '\f113'),
-        'exclamation': ('icon' '\f114'),
-        'facebook-f': ('icon' '\f115'),
-        'facebook-official': ('icon' '\f116'),
-        'facebook-square': ('icon' '\f117'),
-        'facebook': ('icon' '\f118'),
-        'file-directory': ('icon' '\f119'),
-        'file-media': ('icon' '\f11a'),
-        'file': ('icon' '\f11b'),
-        'gear': ('icon' '\f11c'),
-        'google-plus-square': ('icon' '\f11d'),
-        'google-plus': ('icon' '\f11e'),
-        'google': ('icon' '\f11f'),
-        'heart': ('icon' '\f120'),
-        'info-circle': ('icon' '\f121'),
-        'info': ('icon' '\f122'),
-        'instagram': ('icon' '\f123'),
-        'link-external': ('icon' '\f124'),
-        'linkedin-square': ('icon' '\f125'),
-        'linkedin': ('icon' '\f126'),
-        'location': ('icon' '\f127'),
-        'lock': ('icon' '\f128'),
-        'organization': ('icon' '\f129'),
-        'person': ('icon' '\f12a'),
-        'plus-small': ('icon' '\f12b'),
-        'plus': ('icon' '\f12c'),
-        'report': ('icon' '\f12d'),
-        'search': ('icon' '\f12e'),
-        'stop': ('icon' '\f12f'),
-        'tag': ('icon' '\f130'),
-        'triangle-down': ('icon' '\f131'),
-        'triangle-left': ('icon' '\f132'),
-        'triangle-right': ('icon' '\f133'),
-        'triangle-up': ('icon' '\f134'),
-        'twitter-square': ('icon' '\f135'),
-        'twitter': ('icon' '\f136'),
-        'warning': ('icon' '\f137'),
-        'x': ('icon' '\f138'),
+        'chevron-left-double': ('icon' '\f10d'),
+        'chevron-left': ('icon' '\f10e'),
+        'chevron-right-double': ('icon' '\f10f'),
+        'chevron-right': ('icon' '\f110'),
+        'chevron-up': ('icon' '\f111'),
+        'circle-slash': ('icon' '\f112'),
+        'dash': ('icon' '\f113'),
+        'exclamation-circle': ('icon' '\f114'),
+        'exclamation-triangle': ('icon' '\f115'),
+        'exclamation': ('icon' '\f116'),
+        'facebook-f': ('icon' '\f117'),
+        'facebook-official': ('icon' '\f118'),
+        'facebook-square': ('icon' '\f119'),
+        'facebook': ('icon' '\f11a'),
+        'file-directory': ('icon' '\f11b'),
+        'file-media': ('icon' '\f11c'),
+        'file': ('icon' '\f11d'),
+        'gear': ('icon' '\f11e'),
+        'google-plus-square': ('icon' '\f11f'),
+        'google-plus': ('icon' '\f120'),
+        'google': ('icon' '\f121'),
+        'heart': ('icon' '\f122'),
+        'info-circle': ('icon' '\f123'),
+        'info': ('icon' '\f124'),
+        'instagram': ('icon' '\f125'),
+        'link-external': ('icon' '\f126'),
+        'linkedin-square': ('icon' '\f127'),
+        'linkedin': ('icon' '\f128'),
+        'location': ('icon' '\f129'),
+        'lock': ('icon' '\f12a'),
+        'organization': ('icon' '\f12b'),
+        'person': ('icon' '\f12c'),
+        'plus-small': ('icon' '\f12d'),
+        'plus': ('icon' '\f12e'),
+        'report': ('icon' '\f12f'),
+        'search': ('icon' '\f130'),
+        'stop': ('icon' '\f131'),
+        'tag': ('icon' '\f132'),
+        'triangle-down': ('icon' '\f133'),
+        'triangle-left': ('icon' '\f134'),
+        'triangle-right': ('icon' '\f135'),
+        'triangle-up': ('icon' '\f136'),
+        'twitter-square': ('icon' '\f137'),
+        'twitter': ('icon' '\f138'),
+        'warning': ('icon' '\f139'),
+        'x': ('icon' '\f13a'),
 ));
 
 @mixin webfont-icon($name) {
@@ -177,311 +179,325 @@ $webfont-icons: map-merge($webfont-icons, (
     %icon-chevron-down {
         content: "\f10c";
     }
-    .icon-chevron-left:before {
+    .icon-chevron-left-double:before {
         content: "\f10d";
+        vertical-align: bottom;
+    }
+    %icon-chevron-left-double {
+        content: "\f10d";
+    }
+    .icon-chevron-left:before {
+        content: "\f10e";
         vertical-align: bottom;
     }
     %icon-chevron-left {
-        content: "\f10d";
+        content: "\f10e";
+    }
+    .icon-chevron-right-double:before {
+        content: "\f10f";
+        vertical-align: bottom;
+    }
+    %icon-chevron-right-double {
+        content: "\f10f";
     }
     .icon-chevron-right:before {
-        content: "\f10e";
+        content: "\f110";
         vertical-align: bottom;
     }
     %icon-chevron-right {
-        content: "\f10e";
+        content: "\f110";
     }
     .icon-chevron-up:before {
-        content: "\f10f";
+        content: "\f111";
         vertical-align: bottom;
     }
     %icon-chevron-up {
-        content: "\f10f";
+        content: "\f111";
     }
     .icon-circle-slash:before {
-        content: "\f110";
+        content: "\f112";
         vertical-align: bottom;
     }
     %icon-circle-slash {
-        content: "\f110";
+        content: "\f112";
     }
     .icon-dash:before {
-        content: "\f111";
+        content: "\f113";
         vertical-align: bottom;
     }
     %icon-dash {
-        content: "\f111";
+        content: "\f113";
     }
     .icon-exclamation-circle:before {
-        content: "\f112";
+        content: "\f114";
         vertical-align: bottom;
     }
     %icon-exclamation-circle {
-        content: "\f112";
+        content: "\f114";
     }
     .icon-exclamation-triangle:before {
-        content: "\f113";
+        content: "\f115";
         vertical-align: bottom;
     }
     %icon-exclamation-triangle {
-        content: "\f113";
+        content: "\f115";
     }
     .icon-exclamation:before {
-        content: "\f114";
+        content: "\f116";
         vertical-align: bottom;
     }
     %icon-exclamation {
-        content: "\f114";
+        content: "\f116";
     }
     .icon-facebook-f:before {
-        content: "\f115";
+        content: "\f117";
         vertical-align: bottom;
     }
     %icon-facebook-f {
-        content: "\f115";
+        content: "\f117";
     }
     .icon-facebook-official:before {
-        content: "\f116";
+        content: "\f118";
         vertical-align: bottom;
     }
     %icon-facebook-official {
-        content: "\f116";
+        content: "\f118";
     }
     .icon-facebook-square:before {
-        content: "\f117";
+        content: "\f119";
         vertical-align: bottom;
     }
     %icon-facebook-square {
-        content: "\f117";
+        content: "\f119";
     }
     .icon-facebook:before {
-        content: "\f118";
+        content: "\f11a";
         vertical-align: bottom;
     }
     %icon-facebook {
-        content: "\f118";
+        content: "\f11a";
     }
     .icon-file-directory:before {
-        content: "\f119";
+        content: "\f11b";
         vertical-align: bottom;
     }
     %icon-file-directory {
-        content: "\f119";
+        content: "\f11b";
     }
     .icon-file-media:before {
-        content: "\f11a";
+        content: "\f11c";
         vertical-align: bottom;
     }
     %icon-file-media {
-        content: "\f11a";
+        content: "\f11c";
     }
     .icon-file:before {
-        content: "\f11b";
+        content: "\f11d";
         vertical-align: bottom;
     }
     %icon-file {
-        content: "\f11b";
+        content: "\f11d";
     }
     .icon-gear:before {
-        content: "\f11c";
+        content: "\f11e";
         vertical-align: bottom;
     }
     %icon-gear {
-        content: "\f11c";
+        content: "\f11e";
     }
     .icon-google-plus-square:before {
-        content: "\f11d";
+        content: "\f11f";
         vertical-align: bottom;
     }
     %icon-google-plus-square {
-        content: "\f11d";
+        content: "\f11f";
     }
     .icon-google-plus:before {
-        content: "\f11e";
+        content: "\f120";
         vertical-align: bottom;
     }
     %icon-google-plus {
-        content: "\f11e";
+        content: "\f120";
     }
     .icon-google:before {
-        content: "\f11f";
+        content: "\f121";
         vertical-align: bottom;
     }
     %icon-google {
-        content: "\f11f";
+        content: "\f121";
     }
     .icon-heart:before {
-        content: "\f120";
+        content: "\f122";
         vertical-align: bottom;
     }
     %icon-heart {
-        content: "\f120";
+        content: "\f122";
     }
     .icon-info-circle:before {
-        content: "\f121";
+        content: "\f123";
         vertical-align: bottom;
     }
     %icon-info-circle {
-        content: "\f121";
+        content: "\f123";
     }
     .icon-info:before {
-        content: "\f122";
+        content: "\f124";
         vertical-align: bottom;
     }
     %icon-info {
-        content: "\f122";
+        content: "\f124";
     }
     .icon-instagram:before {
-        content: "\f123";
+        content: "\f125";
         vertical-align: bottom;
     }
     %icon-instagram {
-        content: "\f123";
+        content: "\f125";
     }
     .icon-link-external:before {
-        content: "\f124";
+        content: "\f126";
         vertical-align: bottom;
     }
     %icon-link-external {
-        content: "\f124";
+        content: "\f126";
     }
     .icon-linkedin-square:before {
-        content: "\f125";
+        content: "\f127";
         vertical-align: bottom;
     }
     %icon-linkedin-square {
-        content: "\f125";
+        content: "\f127";
     }
     .icon-linkedin:before {
-        content: "\f126";
+        content: "\f128";
         vertical-align: bottom;
     }
     %icon-linkedin {
-        content: "\f126";
+        content: "\f128";
     }
     .icon-location:before {
-        content: "\f127";
+        content: "\f129";
         vertical-align: bottom;
     }
     %icon-location {
-        content: "\f127";
+        content: "\f129";
     }
     .icon-lock:before {
-        content: "\f128";
+        content: "\f12a";
         vertical-align: bottom;
     }
     %icon-lock {
-        content: "\f128";
+        content: "\f12a";
     }
     .icon-organization:before {
-        content: "\f129";
+        content: "\f12b";
         vertical-align: bottom;
     }
     %icon-organization {
-        content: "\f129";
+        content: "\f12b";
     }
     .icon-person:before {
-        content: "\f12a";
+        content: "\f12c";
         vertical-align: bottom;
     }
     %icon-person {
-        content: "\f12a";
+        content: "\f12c";
     }
     .icon-plus-small:before {
-        content: "\f12b";
+        content: "\f12d";
         vertical-align: bottom;
     }
     %icon-plus-small {
-        content: "\f12b";
+        content: "\f12d";
     }
     .icon-plus:before {
-        content: "\f12c";
+        content: "\f12e";
         vertical-align: bottom;
     }
     %icon-plus {
-        content: "\f12c";
+        content: "\f12e";
     }
     .icon-report:before {
-        content: "\f12d";
+        content: "\f12f";
         vertical-align: bottom;
     }
     %icon-report {
-        content: "\f12d";
+        content: "\f12f";
     }
     .icon-search:before {
-        content: "\f12e";
+        content: "\f130";
         vertical-align: bottom;
     }
     %icon-search {
-        content: "\f12e";
+        content: "\f130";
     }
     .icon-stop:before {
-        content: "\f12f";
+        content: "\f131";
         vertical-align: bottom;
     }
     %icon-stop {
-        content: "\f12f";
+        content: "\f131";
     }
     .icon-tag:before {
-        content: "\f130";
+        content: "\f132";
         vertical-align: bottom;
     }
     %icon-tag {
-        content: "\f130";
+        content: "\f132";
     }
     .icon-triangle-down:before {
-        content: "\f131";
+        content: "\f133";
         vertical-align: bottom;
     }
     %icon-triangle-down {
-        content: "\f131";
+        content: "\f133";
     }
     .icon-triangle-left:before {
-        content: "\f132";
+        content: "\f134";
         vertical-align: bottom;
     }
     %icon-triangle-left {
-        content: "\f132";
+        content: "\f134";
     }
     .icon-triangle-right:before {
-        content: "\f133";
+        content: "\f135";
         vertical-align: bottom;
     }
     %icon-triangle-right {
-        content: "\f133";
+        content: "\f135";
     }
     .icon-triangle-up:before {
-        content: "\f134";
+        content: "\f136";
         vertical-align: bottom;
     }
     %icon-triangle-up {
-        content: "\f134";
+        content: "\f136";
     }
     .icon-twitter-square:before {
-        content: "\f135";
+        content: "\f137";
         vertical-align: bottom;
     }
     %icon-twitter-square {
-        content: "\f135";
+        content: "\f137";
     }
     .icon-twitter:before {
-        content: "\f136";
+        content: "\f138";
         vertical-align: bottom;
     }
     %icon-twitter {
-        content: "\f136";
+        content: "\f138";
     }
     .icon-warning:before {
-        content: "\f137";
+        content: "\f139";
         vertical-align: bottom;
     }
     %icon-warning {
-        content: "\f137";
+        content: "\f139";
     }
     .icon-x:before {
-        content: "\f138";
+        content: "\f13a";
         vertical-align: bottom;
     }
     %icon-x {
-        content: "\f138";
+        content: "\f13a";
     }
