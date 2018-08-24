@@ -1,11 +1,28 @@
 $pagination-margin-top: 20px;
 
-$pagination-color-base: #949494;
+$pagination-color-base: #232c33;
 $pagination-color-active: #ffffff;
 $pagination-color-hover: #6266cb;
-$pagination-bg-color-base: #e7e7e7;
-$pagination-bg-color-active: #6266cb;
 $pagination-bg-color-hover: #d3eeff;
+
+$icon-collection: ('first', 'prev', 'next', 'last');
+
+%pagination-icon-first {
+  @extend %icon-chevron-left-double;
+}
+
+%pagination-icon-prev {
+  @extend %icon-chevron-left;
+}
+
+%pagination-icon-next {
+  @extend %icon-chevron-right;
+}
+
+%pagination-icon-last {
+  @extend %icon-chevron-right-double;
+}
+
 
 .pagination_wrapper {
   margin-top: $pagination-margin-top;
@@ -13,38 +30,83 @@ $pagination-bg-color-hover: #d3eeff;
 }
 
 .pagination {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination li {
   display: inline-block;
-  color: $color-primary;
+  color: $pagination-color-base;
+  transition-duration: $duration;
 }
 
 .pagination li a:hover,
 .pagination li a:focus {
   color: $pagination-color-hover;
-  background-color: $pagination-bg-color-hover;
 }
 
 .pagination li span.is-active,
 .pagination li a.is-active {
+  position: relative;
   color: $pagination-color-active;
-  background-color:  $pagination-bg-color-active;
-}
-
-.pagination li a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: calc(50% + 1px);
+    top: 50%;
+    width: 35px;
+    height: 35px;
+    background-color: $pagination-color-hover;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
   }
 }
 
 .pagination li a,
 .pagination li span {
+  position: relative;
   display: block;
   color: $pagination-color-base;
-  padding: 5px 10px;
+  padding: 5px 14px;
+  user-select: none;
   text-decoration: none;
   transition-duration: $duration;
+}
+
+.pagination li[class] {
+  a {
+    padding: 5px 8px;
+    &:after {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      font-family: $font-icon;
+    }
+  }
+
+  @for $i from 0 to length($icon-collection) {
+
+    $icon: unquote(nth($icon-collection, $i+1));
+
+    &.#{$icon} {
+      a:after {
+        @extend %pagination-icon-#{$icon};
+      }
+    }
+  }
+
+  &.first, &.prev {
+    &:hover {
+      transform: translateX(-3px);
+    }
+  }
+
+  &.last, &.next {
+    &:hover {
+      transform: translateX(3px);
+    }
+  }
+
 }
