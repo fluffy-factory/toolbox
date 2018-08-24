@@ -7,6 +7,7 @@
 @import "utils/mixins";
 @import "utils/variables";
 @import "utils/reboot";
+@import "utils/easing";
 //=====================================================
 //  Pages
 //=====================================================
@@ -21,7 +22,8 @@
 @import "components/radio";
 @import "components/box-message";
 @import "components/buttons";
-@import "components/pagination";
+@import "components/pagination/_pagination-classic";
+@import "components/pagination/_pagination-custom";
 @import "components/forms";
 @import "components/form-error";
 

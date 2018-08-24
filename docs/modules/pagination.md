@@ -1,2 +1,5 @@
 # Pagination
-<Pagination></Pagination>
+<PaginationClassic></PaginationClassic>
+
+# Pagination Custom
+<PaginationCustom></PaginationCustom>
