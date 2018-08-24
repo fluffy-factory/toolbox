@@ -36,6 +36,7 @@
 
 <style lang="scss" scoped>
     @import "src/scss/utils/_variables.scss";
+    @import "src/scss/utils/_reboot.scss";
     @import "src/scss/typography/_iconfont.scss";
     @import "src/scss/components/_box-message.scss";
 </style>

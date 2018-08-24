@@ -2,12 +2,13 @@
     <div>
         <div class="pagination_wrapper">
             <ul class="pagination">
+                <li><a href=""> << </a></li>
                 <li><a href=""> < </a></li>
                 <li><a href="">1</a></li>
                 <li><span class="is-active">2</span></li>
                 <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
                 <li><a href=""> > </a></li>
+                <li><a href=""> >> </a></li>
             </ul>
         </div>
     </div>

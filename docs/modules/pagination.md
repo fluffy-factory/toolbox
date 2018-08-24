@@ -1,2 +1,3 @@
-# Pagination
+# Paginations
+
 <Pagination></Pagination>

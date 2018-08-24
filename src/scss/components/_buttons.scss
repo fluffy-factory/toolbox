@@ -34,8 +34,8 @@ a[class^="btn"] {
   display: inline-block;
   vertical-align: middle;
   padding: 10px 20px;
-  margin-top: 5px;
   line-height: 1;
+  font-weight: normal;
   white-space: nowrap;
   cursor: pointer;
   transition-duration: $btn-transition-duration;

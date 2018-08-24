@@ -1,4 +1,4 @@
-# Box message
+# Box messages
 
 **Types:**  `info` `success` `warning` `error`
 <Box-message type="info"></Box-message>
