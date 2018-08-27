@@ -12,17 +12,6 @@
         <input class="btn-primary" type="button" value="input button primary">
         <button class="btn-primary" disabled type="button">button primary</button>
 
-        <br><br>
-
-        <h3>Link animation</h3>
-        <a href="#" class="btn-animation">
-            <div>
-                <span>B</span><span>t</span><span>n</span><span>&nbsp;</span><span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>
-            </div>
-            <div>
-                <span>B</span><span>t</span><span>n</span><span>&nbsp;</span><span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>
-            </div>
-        </a>
     </div>
 </template>
 
