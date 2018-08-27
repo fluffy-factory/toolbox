@@ -1,5 +1,5 @@
 # Buttons
-<Buttons></Buttons>
+<Buttons-btn></Buttons-btn>
 
 ```html
 <!-- link -->
@@ -14,9 +14,35 @@
 <input class="btn-primary" type="button" disabled value="input button primary">
 ```
 
+# Animation
+Each letter must be in a `<span> tag`  
+<br>
+<Buttons-btn-animation></Buttons-btn-animation>
+
+```html
+<a href="#" class="btn-animation">
+	<div>
+		<span>B</span><span>t</span><span>n</span>
+		...
+	</div>
+	<div>
+		<span>B</span><span>t</span><span>n</span>
+		...
+	</div>
+</a>
+```
+
+```twig
+{# Twig example #}
+{% set words = 'Btn animation'|trim|split(' ') %}
+{% for letter in words %}
+		<span>{{ letter }}</span>
+{% endfor %}
+```
+
 # Buttons wrapper
 <br/>
-<Buttons-wrapper></Buttons-wrapper>
+<Buttons-btn-wrapper></Buttons-btn-wrapper>
 
 ```html
 <!-- collapse to each side -->

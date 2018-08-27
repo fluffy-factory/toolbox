@@ -1,7 +1,7 @@
 @mixin col () {
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   flex-grow: 1;
   flex-basis: 100%;
   max-width: 100%;
@@ -17,7 +17,7 @@
   left: ($current / $context) * 100%;
 }
 
-@mixin generateGrid ($gridSelector: 'grid', $colSelector: 'col', $columns: 12, $gutter: 20px, $breakpoints: '') {
+@mixin generateGrid ($gridSelector: 'grid', $colSelector: 'col', $columns: 12, $gutter: 20px, $breakpoints: ()) {
   // Wrapper
   .wrapper-#{$gridSelector} {
     padding-left: ($gutter / 2);
