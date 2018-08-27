@@ -33,7 +33,7 @@ Each letter must be in a `<span> tag`
 ```
 
 ```twig
-{# Twig exaple #}
+{# Twig example #}
 {% set words = 'Btn animation'|trim|split(' ') %}
 {% for letter in words %}
 		<span>{{ letter }}</span>
