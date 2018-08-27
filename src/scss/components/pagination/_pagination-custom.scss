@@ -54,7 +54,7 @@ $icon-collection: ('first', 'prev', 'next', 'last');
     content: '';
     position: absolute;
     z-index: -1;
-    left: calc(50% + 1px);
+    left: 50%;
     top: 50%;
     width: 35px;
     height: 35px;
