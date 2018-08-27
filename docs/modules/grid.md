@@ -3,6 +3,13 @@
 A flexbox grid system with some helper classes for `alignment`, `space distribution` ...
 
 ## Base 
+Arguments defaults:
+ - **$gridSelector:** `` string 'grid' ``
+ - **$colSelector:** `` string 'col' ``
+ - **$columns:** `` number 12 ``
+ - **$gutter:** `` css value 20px ``
+ - **$breakpoints:** `` list () ``
+
 <br/>
 <Grid-base></Grid-base>
 
@@ -15,6 +22,18 @@ A flexbox grid system with some helper classes for `alignment`, `space distribut
 		<div>...</div>
 	</div>
 </div>
+```
+
+```scss
+// Breakpoints list
+$grid-breakpoints: (
+	('-s', $screen-s),
+	('-m', $screen-m),
+	('-l', $screen-l),
+	('-ml', $screen-ml)
+);
+
+@include generateGrid('grid', 'col', 12, 20px, $grid-breakpoints);
 ```
 
 <br/>
@@ -44,9 +63,13 @@ A flexbox grid system with some helper classes for `alignment`, `space distribut
 <br/>
 
 ## Alignments
+Use **align-items**: `flex-start`, `center`, `flex-end` ...
+<br/>
 <br/>
 <Grid-align></Grid-align>
 
 ## Distributions
+Use **justify-content**: `space-around`, `center`, `space-between` ...
+<br/>
 <br/>
 <Grid-distribution></Grid-distribution>

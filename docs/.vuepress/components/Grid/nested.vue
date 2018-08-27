@@ -91,17 +91,26 @@
 
     [class*="col-"] > * {
         @extend %col-element;
+        @media screen and (min-width: $screen-l) {
+            padding: 10px;
+        }
     }
 
     [class*="col-"] > * [class*="col-"] > * {
         @extend %col-element;
         padding: 5px;
         background-color: darken($color-primary, 10%);
+        @media screen and (min-width: $screen-l) {
+            padding: 10px;
+        }
     }
 
     [class*="col-"] > * [class*="col-"] > * [class*="col-"] > * {
         @extend %col-element;
         padding: 5px;
         background-color: darken($color-primary, 20%);
+        @media screen and (min-width: $screen-l) {
+            padding: 10px;
+        }
     }
 </style>

@@ -56,7 +56,7 @@
 
     .first > * {
         height: 50px;
-        line-height: 50px;
+        //line-height: 50px;
     }
 
     .grid.top {
