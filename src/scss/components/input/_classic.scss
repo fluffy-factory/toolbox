@@ -1,0 +1,11 @@
+@include inputPlaceholder(font-style, italic);
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type='datetime'],
+input[type="search"],
+input[type="url"] {
+  @extend .input-reset;
+}

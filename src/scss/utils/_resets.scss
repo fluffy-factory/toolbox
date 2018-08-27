@@ -14,3 +14,17 @@
     content: '';
   }
 }
+
+
+//=====================================================
+//  Input reset
+//=====================================================
+.input-reset {
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid $color-grey;
+  padding: 8px 12px;
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+  }
+}

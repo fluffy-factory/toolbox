@@ -42,3 +42,19 @@ https://css-tricks.com/easing-linear-gradients/
   background: linear-gradient(unquote($direction), $stops);
 
 }
+
+@mixin inputPlaceholder($property, $val) {
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    #{$property}: $val;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    #{$property}: $val;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    #{$property}: $val;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    #{$property}: $val;
+  }
+}
+

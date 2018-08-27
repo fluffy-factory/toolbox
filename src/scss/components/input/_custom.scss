@@ -1,0 +1,40 @@
+@include inputPlaceholder(font-style, italic);
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type='datetime'],
+input[type="search"],
+input[type="url"] {
+  @extend .input-reset;
+}
+
+.input-container {
+  position: relative;
+
+  input {
+    width: 100%;
+    margin-top: 15px;
+    padding: 18px 15px 15px 15px;
+    &:focus + label {
+      transform: translateX(5px);
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 20px;
+    max-width: calc(100% - 40px);
+    padding: 3px 8px;
+    color: white;
+    background-color: $color-primary;
+    font-size: $font-size-small;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: transform $duration $easeInOutCubic;
+  }
+}

@@ -23,9 +23,10 @@ module.exports = {
         collapsable: true,
         children: [
           '/forms/',
-          '/forms/checkboxes-radios'
+          '/forms/checkboxes-radios',
+          '/forms/input',
         ]
-      },
+      }
     ]
   }
 };
