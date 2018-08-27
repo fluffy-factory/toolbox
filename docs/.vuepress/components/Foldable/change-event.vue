@@ -1,7 +1,7 @@
 <template>
     <div>
         <form action="">
-            <input id="show" class="js-checkbox-trigger" type="checkbox">
+            <input id="show" class="js-trigger-checkbox" type="checkbox">
             <label for="show">Show me more fields</label>
 
             <div id="js-target-checkbox" class="target">
@@ -81,19 +81,15 @@
     export default {
       mounted () {
         // Animation
-        const foldableAnimated = new Foldable({
+        const foldableChange = new Foldable({
           eventType: 'change',
           trigger: document.querySelectorAll('.js-trigger-checkbox'),
           target: document.getElementById('js-target-checbox'),
           openCallback: ({trigger, target, done}) => {
-             Velocity(target, 'slideDown', {
-               complete: () => done()
-             })
+
            },
           closeCallback: ({trigger, target, done}) => {
-            Velocity(target, 'slideUp', {
-              complete: () => done()
-            })
+
           }
         });
       }
