@@ -26,6 +26,13 @@ module.exports = {
           '/forms/checkboxes-radios'
         ]
       },
+      {
+        title: 'Javascript',
+        collapsable: true,
+        children: [
+          '/javascript/foldable',
+        ]
+      },
     ]
   }
 };

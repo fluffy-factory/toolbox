@@ -6,7 +6,7 @@ export class Foldable {
     this.target = config.target || null;
     this.openCallback = config.openCallback || null;
     this.closeCallback = config.closeCallback || null;
-    this.breakpoint = config.breakpoint || null;
+    this.breakpoint = config.breakpoint || {min: 0, max: 0};
     this.isOpen = this.getIsOpen();
     this.isAnimated = false;
 
@@ -17,7 +17,7 @@ export class Foldable {
       if (this.eventType === 'change') {
         this.target.disabled = true;
       }
-      this.switchState();
+      this.toggle();
     };
 
     this.addRemoveEvents(eventHandler);
@@ -108,7 +108,7 @@ export class Foldable {
   }
 
   // Toggle state open / close
-  switchState () {
+  toggle () {
     if (!this.isAnimated) {
       this.isAnimated = true;
       this.isOpen = this.getIsOpen();
