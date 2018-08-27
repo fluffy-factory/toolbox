@@ -33,4 +33,12 @@
     @import 'src/scss/utils/mixins';
     @import 'src/scss/components/buttons';
     @import 'src/scss/layout/buttons-wrapper';
+
+    @media screen and (max-width: $screen-s) {
+        .btn-primary,
+        .btn-secondary,
+        .btn-animation {
+            margin: 10px 0;
+        }
+    }
 </style>

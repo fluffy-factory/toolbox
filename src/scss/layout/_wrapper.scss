@@ -1,0 +1,19 @@
+@mixin wrapper($size: 1270px, $margin: "0 auto", $padding-x: 20px, $padding-y: 20px) {
+  position: relative;
+  max-width: $size;
+  margin: unquote($margin);
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+}
+
+.wrapper {
+  @include wrapper($wrapper-size, "0 auto", 20px, 0);
+}
+.wrapper-small {
+  @include wrapper($wrapper-size-small, "0 auto", 20px, 0);
+}
+.wrapper-large {
+  @include wrapper($wrapper-size-large, "0 auto", 20px, 0);
+}
