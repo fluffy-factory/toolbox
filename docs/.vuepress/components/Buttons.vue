@@ -27,9 +27,9 @@
 </template>
 
 <style lang="scss" scoped>
+    @import 'src/scss/utils/easing';
     @import 'src/scss/utils/variables';
     @import 'src/scss/utils/reboot';
-    @import 'src/scss/utils/easing';
     @import 'src/scss/utils/mixins';
     @import 'src/scss/components/buttons';
     @import 'src/scss/layout/buttons-wrapper';
