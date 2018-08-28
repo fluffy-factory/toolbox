@@ -6,7 +6,8 @@ export class Foldable {
     this.target = config.target || null;
     this.openCallback = config.openCallback || null;
     this.closeCallback = config.closeCallback || null;
-    this.breakpoint = config.breakpoint || null;
+    this.breakpoint = config.breakpoint || {min: 0, max: 0};
+    this.classActive = config.classActive || 'is-active';
     this.isOpen = this.getIsOpen();
     this.isAnimated = false;
 
@@ -15,9 +16,9 @@ export class Foldable {
         e.preventDefault();
       }
       if (this.eventType === 'change') {
-        this.target.disabled = true;
+        this.trigger.forEach((trigger) => trigger.disabled = true);
       }
-      this.switchState();
+      this.toggle();
     };
 
     this.addRemoveEvents(eventHandler);
@@ -72,7 +73,7 @@ export class Foldable {
   // Get the target's state, opened or closed
   getIsOpen () {
     let active = this.trigger.filter((trigger) => {
-      return trigger.classList.contains('is-active');
+      return trigger.classList.contains(this.classActive);
     });
     return active.length === this.trigger.length;
   }
@@ -81,7 +82,7 @@ export class Foldable {
   execOpen () {
     if (this.openCallback !== null && typeof this.openCallback === 'function') {
       this.openCallback.call(this, {
-        trigger: this.trigger,
+        trigger: this.trigger.length > 1 ?  this.trigger : this.trigger[0],
         target: this.target,
         done: () => this.done()
       });
@@ -96,7 +97,7 @@ export class Foldable {
   execClose () {
     if (this.closeCallback !== null && typeof this.closeCallback === 'function') {
       this.closeCallback.call(this, {
-        trigger: this.trigger,
+        trigger: this.trigger.length > 1 ?  this.trigger : this.trigger[0],
         target: this.target,
         done: () => this.done()
       });
@@ -108,12 +109,12 @@ export class Foldable {
   }
 
   // Toggle state open / close
-  switchState () {
+  toggle () {
     if (!this.isAnimated) {
       this.isAnimated = true;
       this.isOpen = this.getIsOpen();
       this.trigger.forEach((trigger) => {
-        trigger.classList.toggle('is-active');
+        trigger.classList.toggle(this.classActive);
       });
       if (!this.isOpen) {
         this.execOpen();
@@ -127,7 +128,7 @@ export class Foldable {
   done () {
     this.isAnimated = false;
     if (this.eventType === 'change') {
-      this.target.disabled = false;
+      this.trigger.forEach((trigger) => trigger.disabled = false);
     }
   }
 
