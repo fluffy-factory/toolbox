@@ -42,8 +42,8 @@
 
 <script>
 
-  import {MaterialInput} from '../../../../src/js/forms/materialinput';
-  import {showPassword} from '../../../../src/js/forms/showpassword';
+  import {MaterialInput} from '../../../../src/js/forms/MaterialInput';
+  import {showPassword} from '../../../../src/js/forms/ShowPassword';
 
   export default {
     mounted() {
