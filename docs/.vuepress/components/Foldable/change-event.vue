@@ -7,7 +7,7 @@
             <div id="js-target-checkbox" class="target">
                 <ul>
                     <li>
-                        <label for="name">Label</label>
+                        <label class="is-required" for="name">Label</label>
                         <input id="name" type="text">
                     </li>
                     <li>
@@ -75,17 +75,23 @@
 
 <script>
     import {Foldable} from '../../../../src/js/modules/Foldable';
-    import Velocity from 'velocity-animate';
+    import {setRequiredFields} from '../../../../src/js/utils/setRequiredFields';
 
     export default {
       mounted () {
-        // Change event
-        const foldableChange = new Foldable({
+        import ('velocity-animate').then((velocity) => {
+          const Velocity = velocity.default;
+          // Change event
+          const foldableChange = new Foldable({
             eventType: 'change',
             trigger: document.querySelectorAll('.js-trigger-checkbox'),
             target: document.getElementById('js-target-checkbox'),
             openCallback: ({trigger, target, done}) => {
               if (trigger.checked) {
+
+                const labelsRequired = target.querySelectorAll('label.is-required');
+                setRequiredFields(labelsRequired, true);
+
                 Velocity(target, 'slideDown', {
                   duration: 600,
                   complete: () => done()
@@ -94,12 +100,17 @@
             },
             closeCallback: ({trigger, target, done}) => {
               if (!trigger.checked) {
+
+                const labelsRequired = target.querySelectorAll('label.is-required');
+                setRequiredFields(labelsRequired, false);
+
                 Velocity(target, 'slideUp', {
                   duration: 600,
                   complete: () => done()
                 });
               }
             }
+          });
         });
       }
     }

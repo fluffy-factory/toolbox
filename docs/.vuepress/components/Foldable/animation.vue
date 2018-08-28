@@ -59,25 +59,27 @@
 
 <script>
     import {Foldable} from '../../../../src/js/modules/Foldable';
-    import Velocity from 'velocity-animate';
 
     export default {
       mounted () {
-        // Animation
-        const foldableAnimated = new Foldable({
-          trigger: document.querySelectorAll('.js-trigger-animated'),
-          target: document.getElementById('js-target-animated'),
-          openCallback: ({trigger, target, done}) => {
-             Velocity(target, 'slideDown', {
-               complete: () => done()
-             })
-           },
-          closeCallback: ({trigger, target, done}) => {
-            Velocity(target, 'slideUp', {
-              complete: () => done()
-            })
-          }
-        });
+        import ('velocity-animate').then((velocity) => {
+          const Velocity = velocity.default;
+          // Animation
+          const foldableAnimated = new Foldable({
+            trigger: document.querySelectorAll('.js-trigger-animated'),
+            target: document.getElementById('js-target-animated'),
+            openCallback: ({trigger, target, done}) => {
+              Velocity(target, 'slideDown', {
+                complete: () => done()
+              })
+            },
+            closeCallback: ({trigger, target, done}) => {
+              Velocity(target, 'slideUp', {
+                complete: () => done()
+              })
+            }
+          });
+        })
       }
     }
 </script>

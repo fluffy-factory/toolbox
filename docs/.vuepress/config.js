@@ -2,14 +2,15 @@ module.exports = {
   port: 8088,
   base: '/toolbox/',
   theme: '',
-  title: 'Toolbox',
+  title: '',
   configureWebpack: {},
   themeConfig: {
+    logo: '/toolbox_full.svg',
     nav: [
-      {text: 'Home', link: '/'},
-      {text: 'Scss', link: '/scss/'},
-      {text: 'Javascript', link: '/javascript/'},
-      {text: 'github', link: 'https://github.com/fluffy-factory/toolbox'},
+      { text: 'Home', link: '/' },
+      { text: 'Scss', link: '/scss/' },
+      { text: 'Javascript', link: '/javascript/' },
+      { text: 'github', link: 'https://github.com/fluffy-factory/toolbox' },
     ],
     sidebar: {
       '/scss/': [
@@ -34,8 +35,7 @@ module.exports = {
           ]
         },
       ],
-      '/javascript/': [
-        {
+      '/javascript/': [{
           title: 'Modules',
           collapsable: true,
           children: [
@@ -43,11 +43,10 @@ module.exports = {
           ]
         },
         {
-          title: 'Forms',
+          title: 'Utils',
           collapsable: true,
           children: [
-            'forms/materialinput',
-            'forms/showpassword',
+            'utils/setRequiredFields',
           ]
         }],
       // fallback

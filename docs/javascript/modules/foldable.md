@@ -64,12 +64,13 @@ const foldableAnimated = new Foldable({
 ```
 
 ## Change event
-You can use Foldable to toggle an element in forms if you need it.
+You can use Foldable to toggle an element in forms if you need it.  
 <br>
 <br>
 <Foldable-change-event></Foldable-change-event>
 
-**Example with Velocity.js**
+**Example with Velocity.js**  
+In this example we use [setRequiredFields()](../utils/setRequiredFields) to manage required fields.
 ```js {6,13}
 const foldableChange = new Foldable({
 	eventType: 'change',
@@ -77,6 +78,11 @@ const foldableChange = new Foldable({
 	target: document.getElementById('js-target-checkbox'),
 	openCallback: ({trigger, target, done}) => {
 	  if (trigger.checked) {
+	  
+	  	// Mangage required fields
+	  	const labelsRequired = target.querySelectorAll('label.is-required');
+	  	setRequiredFields(labelsRequired, true);
+      
 	    Velocity(target, 'slideDown', {
 	      complete: () => done()
 	    });
@@ -84,6 +90,11 @@ const foldableChange = new Foldable({
 	},
 	closeCallback: ({trigger, target, done}) => {
 	  if (!trigger.checked) {
+	  
+	  	// Mangage required fields
+	  	const labelsRequired = target.querySelectorAll('label.is-required');
+	  	setRequiredFields(labelsRequired, true);
+	  	
 	    Velocity(target, 'slideDown', {
 	      complete: () => done()
 	    });
