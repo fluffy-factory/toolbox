@@ -59,7 +59,7 @@
 
 <script>
     import {Foldable} from '../../../../src/js/modules/Foldable';
-    import Velocity from '../../../../node_modules/velocity-animate';
+    const Velocity = require('velocity-animate');
 
     export default {
       mounted () {
