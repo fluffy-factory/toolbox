@@ -2,9 +2,10 @@ module.exports = {
   port: 8088,
   base: '/toolbox/',
   theme: '',
-  title: 'Toolbox',
+  title: '',
   configureWebpack: {},
   themeConfig: {
+    logo: '/toolbox_full.svg',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Scss', link: '/scss/' },
