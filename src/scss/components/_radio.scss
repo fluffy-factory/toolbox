@@ -7,40 +7,42 @@
 */
 
 // layout
-$radio-width: 20px;
-$radio-height: 20px;
+$radio-width: 21px;
+$radio-height: 21px;
 $radio-top: calc(50% - 10px);
 $radio-label-margin-right: 10px;
 $radio-radius: 10px;
 $radio-icon-size: 10px;
 $radio-anim-duration: 300ms;
 // state: initial
-$radio-icon-size: 10px;
+$radio-icon-size: 3px;
 $radio-bg-color: #f1f1f1;
 $radio-border-color: #CCC;
 $radio-text-color: #9e9e9e;
 // state: checked
-$radio-icon-size-checked: 10px;
-$radio-bg-color-checked: #498fff;
+$radio-icon-size-checked: 11px;
+$radio-bg-color-checked: #ffffff;
 $radio-border-color-checked: #498fff;
-$radio-text-color-checked: #ffffff;
+$radio-text-color-checked: #498fff;
 // state: disabled
-$radio-icon-size-disabled: 10px;
+$radio-icon-size-disabled: 3px;
 $radio-bg-color-disabled: #f1f1f1;
 $radio-border-color-disabled: #CCC;
 $radio-text-color-disabled: #9e9e9e;
 
 %radio-icon-initial {
-  content: '•';
+  @extend %icon-point;
+  font-family: $font-icon;
 }
 
 %radio-icon-checked {
-  @extend %icon-check;
+  @extend %icon-point;
   font-family: $font-icon;
 }
 
 %radio-icon-disabled {
-  content: '•';
+  @extend %icon-point;
+  font-family: $font-icon;
 }
 
 // Hide the input
@@ -64,7 +66,7 @@ input[type="radio"]:checked:disabled + label {
 }
 
 // pseudo element
-input[type="radio"] + label:before {
+input[type="radio"] + label:before  {
   @extend %radio-icon-initial;
   font-size: $radio-icon-size;
   text-align: center;
@@ -99,10 +101,10 @@ input[type="radio"]:checked:disabled + label:before {
 // Disabled
 input[type="radio"]:disabled + label:before {
   @extend %radio-icon-disabled;
-  font-size: $radio-icon-size-checked;
   background-color: $radio-bg-color-disabled;
   border-color: $radio-border-color-disabled;
   color: $radio-text-color-disabled;
+  font-size: $radio-icon-size-disabled;
 }
 
 input[type="radio"]:disabled + label {

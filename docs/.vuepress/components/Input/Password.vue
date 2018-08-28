@@ -8,9 +8,9 @@
             </div>
 
             <div class="input-container">
-                <i data-view-password class="icon icon-eye"></i>
-                <input type="password" id="password1" name="password1" placeholder="Input password">
-                <label for="password1">Input password</label>
+                <i class="icon icon-alert"></i>
+                <input type="text" id="text" name="text" placeholder="Input text">
+                <label for="text">Input text</label>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
 <script>
 
   import {MaterialInput} from '../../../../src/js/forms/MaterialInput';
-  import {showPassword} from '../../../../src/js/forms/showpassword';
+  import {showPassword} from '../../../../src/js/forms/ShowPassword';
 
   export default {
     mounted() {
@@ -52,7 +52,6 @@
       });
 
       showPassword('.input-validate');
-      showPassword('.input-container');
     }
   }
 </script>
