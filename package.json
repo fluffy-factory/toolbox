@@ -39,5 +39,8 @@
     "last 2 versions",
     "ie >= 11",
     "safari >= 7"
-  ]
+  ],
+  "dependencies": {
+    "velocity-animate": "^1.5.2"
+  }
 }
