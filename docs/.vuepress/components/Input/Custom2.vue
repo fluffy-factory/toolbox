@@ -27,7 +27,7 @@
 
 <script>
 
-  import {MaterialInput} from '../../../../src/js/forms/materialinput';
+  import {MaterialInput} from '../../../../src/js/forms/MaterialInput';
 
   export default {
     mounted() {
