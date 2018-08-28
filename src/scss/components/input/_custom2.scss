@@ -25,7 +25,8 @@ input[type="url"] {
     padding: $padding-top $padding-left-right $padding-bottom $padding-left-right;
     font-size: $font-size-small;
     &:focus + label,
-    &.valid + label {
+    &[value] + label,
+    &.is-valid + label {
       top: 0;
       font-size: $font-size-extra-small;
       color: $color-grey-dark;
