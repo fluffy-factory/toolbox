@@ -83,8 +83,9 @@ input[type="checkbox"] + label:before {
   transition-duration: $checkbox-anim-duration;
 }
 
-// Checked
-input[type="checkbox"]:checked + label:before {
+// Checked & checked:disabled
+input[type="checkbox"]:checked + label:before,
+input[type="checkbox"]:checked:disabled + label:before {
   @extend %checkbox-icon-checked;
   font-size: $checkbox-icon-size-checked;
   background-color: $checkbox-bg-color-checked;
@@ -93,7 +94,7 @@ input[type="checkbox"]:checked + label:before {
 }
 
 // Disabled
-input[type="checkbox"]:disabled + label:before {
+input[type="checkbox"]:disabled + label:before, {
   @extend %checkbox-icon-disabled;
   font-size: $checkbox-icon-size-checked;
   background-color: $checkbox-bg-color-disabled;

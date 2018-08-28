@@ -86,7 +86,8 @@ input[type="radio"] + label:before {
 }
 
 // Checked
-input[type="radio"]:checked + label:before {
+input[type="radio"]:checked + label:before,
+input[type="radio"]:checked:disabled + label:before {
   @extend %radio-icon-checked;
   font-size: $radio-icon-size-checked;
   background-color: $radio-bg-color-checked;
