@@ -2,9 +2,9 @@
     <div>
         <div class="bg-grey">
             <div class="input-validate">
-                <i class="icon icon-lock"></i>
-                <input type="text" id="text" name="text">
-                <label for="text">Input text</label>
+                <i data-view-password class="icon icon-eye"></i>
+                <input type="password" id="password" name="password">
+                <label for="password">Input Password</label>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
     @import 'src/scss/utils/easing';
     @import 'src/scss/utils/mixins';
     @import 'src/scss/typography/iconfont';
-    @import 'src/scss/components/input/custom2';
+    @import 'src/scss/components/input/password';
 
     .bg-grey {
         background-color: $color-grey;
