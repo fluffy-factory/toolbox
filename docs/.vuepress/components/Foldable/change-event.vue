@@ -7,7 +7,7 @@
             <div id="js-target-checkbox" class="target">
                 <ul>
                     <li>
-                        <label for="name">Label</label>
+                        <label class="is-required" for="name">Label</label>
                         <input id="name" type="text">
                     </li>
                     <li>
@@ -75,6 +75,7 @@
 
 <script>
     import {Foldable} from '../../../../src/js/modules/Foldable';
+    import {setRequiredFields} from '../../../../src/js/utils/setRequiredFields';
 
     export default {
       mounted () {
@@ -87,6 +88,10 @@
             target: document.getElementById('js-target-checkbox'),
             openCallback: ({trigger, target, done}) => {
               if (trigger.checked) {
+
+                const labelsRequired = target.querySelectorAll('label.is-required');
+                setRequiredFields(labelsRequired, true);
+
                 Velocity(target, 'slideDown', {
                   duration: 600,
                   complete: () => done()
@@ -95,6 +100,10 @@
             },
             closeCallback: ({trigger, target, done}) => {
               if (!trigger.checked) {
+
+                const labelsRequired = target.querySelectorAll('label.is-required');
+                setRequiredFields(labelsRequired, false);
+
                 Velocity(target, 'slideUp', {
                   duration: 600,
                   complete: () => done()

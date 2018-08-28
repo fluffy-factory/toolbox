@@ -35,12 +35,19 @@ module.exports = {
         },
       ],
       '/javascript/': [{
-        title: 'Modules',
-        collapsable: true,
-        children: [
-          'modules/foldable',
-        ]
-      }],
+          title: 'Modules',
+          collapsable: true,
+          children: [
+            'modules/foldable',
+          ]
+        },
+        {
+          title: 'Utils',
+          collapsable: true,
+          children: [
+            'utils/setRequiredFields',
+          ]
+        }],
       // fallback
       '/': []
     }
