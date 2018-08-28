@@ -54,7 +54,8 @@ input[type="radio"] + label {
   vertical-align: middle;
 }
 
-input[type="radio"] + label {
+input[type="radio"] + label,
+input[type="radio"]:checked:disabled + label {
   position: relative;
   display: inline-block;
   padding-left: $radio-width + 10;
