@@ -10,7 +10,5 @@
     @import 'src/scss/utils/reboot';
     @import 'src/scss/utils/resets';
     @import 'src/scss/utils/mixins';
-    @import 'src/scss/typography/iconfont';
-    @import 'src/scss/components/forms';
     @import 'src/scss/components/input/classic';
 </style>
