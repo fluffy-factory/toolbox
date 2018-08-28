@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="input-container">
+            <i class="icon icon-alert"></i>
             <input type="text" id="text" name="text" placeholder="Input text">
             <label for="text">Input text</label>
         </div>
@@ -14,5 +15,6 @@
     @import 'src/scss/utils/easing';
     @import 'src/scss/utils/mixins';
     @import 'src/scss/typography/iconfont';
+    @import 'src/scss/components/forms';
     @import 'src/scss/components/input/custom';
 </style>

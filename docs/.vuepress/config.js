@@ -3,14 +3,13 @@ module.exports = {
   base: '/toolbox/',
   theme: '',
   title: 'Toolbox',
-  configureWebpack: {
-  },
+  configureWebpack: {},
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Scss', link: '/scss/' },
-      { text: 'Javascript', link: '/javascript/' },
-      { text: 'github', link: 'https://github.com/fluffy-factory/toolbox' },
+      {text: 'Home', link: '/'},
+      {text: 'Scss', link: '/scss/'},
+      {text: 'Javascript', link: '/javascript/'},
+      {text: 'github', link: 'https://github.com/fluffy-factory/toolbox'},
     ],
     sidebar: {
       '/scss/': [
@@ -35,13 +34,22 @@ module.exports = {
           ]
         },
       ],
-      '/javascript/': [{
-        title: 'Modules',
-        collapsable: true,
-        children: [
-          'modules/foldable',
-        ]
-      }],
+      '/javascript/': [
+        {
+          title: 'Modules',
+          collapsable: true,
+          children: [
+            'modules/foldable',
+          ]
+        },
+        {
+          title: 'Forms',
+          collapsable: true,
+          children: [
+            'forms/materialinput',
+            'forms/showpassword',
+          ]
+        }],
       // fallback
       '/': []
     }

@@ -17,7 +17,7 @@
     @import 'src/scss/utils/easing';
     @import 'src/scss/utils/mixins';
     @import 'src/scss/typography/iconfont';
-    @import 'src/scss/components/input/custom2';
+    @import 'src/scss/components/input/material';
 
     .bg-grey {
         background-color: $color-grey;

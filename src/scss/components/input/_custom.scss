@@ -1,3 +1,7 @@
+$marg-left-right: 20px;
+$marg-top-input: 15px;
+$font-size-icon: $font-size-base;
+
 @include inputPlaceholder(font-style, italic);
 
 input[type="text"],
@@ -13,10 +17,23 @@ input[type="url"] {
 .input-container {
   position: relative;
 
+  .#{unquote($font-icon)} {
+    position: absolute;
+    top: 50%;
+    right: $marg-left-right;
+    font-size: $font-size-icon;
+    transform: translateY(-50% - #{$marg-top-input});
+
+    & + input {
+      padding-right: $marg-left-right*2 + $font-size-icon;
+    }
+  }
+
   input {
     width: 100%;
-    margin-top: 15px;
-    padding: 18px 15px 15px 15px;
+    margin-top: $marg-top-input;
+    padding: 18px $marg-left-right 15px $marg-left-right;
+    background-color: white;
     &:focus + label {
       transform: translateX(5px);
     }
@@ -26,12 +43,13 @@ input[type="url"] {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0 20px;
-    max-width: calc(100% - 40px);
-    padding: 3px 8px;
+    margin: 0 $marg-left-right;
+    max-width: calc(100% - #{$marg-left-right});
+    padding: 5px 8px;
     color: white;
     background-color: $color-primary;
     font-size: $font-size-small;
+    line-height: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
