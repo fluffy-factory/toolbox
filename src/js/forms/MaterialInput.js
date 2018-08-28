@@ -1,8 +1,7 @@
 export class MaterialInput {
-  constructor(elem, className = 'is-valid', dataPassword = '[data-view-password]') {
-    this.elem = document.querySelectorAll(elem);
-    this.className = className;
-    this.dataPassword = dataPassword;
+  constructor(config) {
+    this.element = config.element;
+    this.className = config.className || 'is-valid';
     this.init();
   }
 
@@ -23,45 +22,14 @@ export class MaterialInput {
     }
   }
 
-  togglePassword(elem) {
-    if (elem.type === "password") {
-      elem.type = "text";
-    } else {
-      elem.type = "password";
-    }
-  }
-
-  hidePassword(elem) {
-    if (elem.type === "text") {
-      elem.type = "password";
-    }
-  }
-
   init() {
-
-    for (let elem of this.elem) {
+    for (let elem of this.element) {
       let $input = elem.querySelector('input');
-      let $showPasswordIcon = elem.querySelector(this.dataPassword);
 
       // Check validate input
       MaterialInput.addListener($input, 'focus focusout keyup', () => {
         this.checkIfInputIsEmpty($input);
       });
-
-      // Click password icon for show content
-      if ($showPasswordIcon) {
-        $showPasswordIcon.addEventListener('click', () => {
-          this.togglePassword($input);
-        });
-
-        document.addEventListener("click", (event) => {
-          let classElem = elem.className;
-
-          if (!event.target.closest('.'+classElem)) {
-            this.hidePassword($input);
-          }
-        });
-      }
     }
   }
 }
