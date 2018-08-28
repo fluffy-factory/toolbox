@@ -75,12 +75,13 @@
 
 <script>
     import {Foldable} from '../../../../src/js/modules/Foldable';
-    const Velocity = require('velocity-animate');
 
     export default {
       mounted () {
-        // Change event
-        const foldableChange = new Foldable({
+        import ('velocity-animate').then((velocity) => {
+          const Velocity = velocity.default;
+          // Change event
+          const foldableChange = new Foldable({
             eventType: 'change',
             trigger: document.querySelectorAll('.js-trigger-checkbox'),
             target: document.getElementById('js-target-checkbox'),
@@ -100,6 +101,7 @@
                 });
               }
             }
+          });
         });
       }
     }

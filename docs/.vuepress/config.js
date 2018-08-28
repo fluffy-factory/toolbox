@@ -3,13 +3,7 @@ module.exports = {
   base: '/toolbox/',
   theme: '',
   title: 'Toolbox',
-  configureWebpack: {
-    resolve: {
-      alias: {
-        'velocity': 'velocity-animate'
-      }
-    }
-  },
+  configureWebpack: {},
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
