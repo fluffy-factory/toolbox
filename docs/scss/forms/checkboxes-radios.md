@@ -11,20 +11,6 @@
 <label for="disabled">disabled</label>
 ```
 
-## Radio
-<Radio></Radio>
- ```html
-<input type="radio" id="piapolex" name="cats">
-<label for="piapolex">Piapolex</label>
-
-<!-- disabled -->
-<input type="radio" id="disabled2" name="cats" disabled>
-<label for="disabled2">disabled</label>
-```
-
-## Extend
-You can extend the content property to use a custom font.
-
 ```scss
 // Checkboxes
 %checkbox-icon-initial {
@@ -41,18 +27,41 @@ You can extend the content property to use a custom font.
   content: '•';
 }
 
+// Hide the input
+input[type="checkbox"] {
+  display: none;
+}
+```
+
+## Radio
+<Radio></Radio>
+ ```html
+<input type="radio" id="piapolex" name="cats">
+<label for="piapolex">Piapolex</label>
+
+<!-- disabled -->
+<input type="radio" id="disabled2" name="cats" disabled>
+<label for="disabled2">disabled</label>
+```
+
+## Extend
+You can extend the content property to use a custom font.
+
+```scss
 // Radios
 %radio-icon-initial {
-  content: '•';
+  @extend %icon-point;
+  font-family: $font-icon;
 }
 
 %radio-icon-checked {
-  @extend %icon-check;
+  @extend %icon-point;
   font-family: $font-icon;
 }
 
 %radio-icon-disabled {
-  content: '•';
+  @extend %icon-point;
+  font-family: $font-icon;
 }
 
 // Hide the input

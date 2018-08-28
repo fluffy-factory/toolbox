@@ -1,9 +1,9 @@
 @font-face {
     font-family: "icon";
-    src: url("/toolbox/fonts/icon.eot?b687c52985d9149b810f73114b7f606c?#iefix") format("embedded-opentype"),
-url("/toolbox/fonts/icon.woff?b687c52985d9149b810f73114b7f606c") format("woff"),
-url("/toolbox/fonts/icon.ttf?b687c52985d9149b810f73114b7f606c") format("truetype"),
-url("/toolbox/fonts/icon.svg?b687c52985d9149b810f73114b7f606c#icon") format("svg");
+    src: url("/toolbox/fonts/icon.eot?65f15a33a7384e757bf801095d091d8b?#iefix") format("embedded-opentype"),
+url("/toolbox/fonts/icon.woff?65f15a33a7384e757bf801095d091d8b") format("woff"),
+url("/toolbox/fonts/icon.ttf?65f15a33a7384e757bf801095d091d8b") format("truetype"),
+url("/toolbox/fonts/icon.svg?65f15a33a7384e757bf801095d091d8b#icon") format("svg");
 }
 
 @if not variable-exists('webfont-icons') {
@@ -58,18 +58,19 @@ $webfont-icons: map-merge($webfont-icons, (
         'person': ('icon' '\f12d'),
         'plus-small': ('icon' '\f12e'),
         'plus': ('icon' '\f12f'),
-        'report': ('icon' '\f130'),
-        'search': ('icon' '\f131'),
-        'stop': ('icon' '\f132'),
-        'tag': ('icon' '\f133'),
-        'triangle-down': ('icon' '\f134'),
-        'triangle-left': ('icon' '\f135'),
-        'triangle-right': ('icon' '\f136'),
-        'triangle-up': ('icon' '\f137'),
-        'twitter-square': ('icon' '\f138'),
-        'twitter': ('icon' '\f139'),
-        'warning': ('icon' '\f13a'),
-        'x': ('icon' '\f13b'),
+        'point': ('icon' '\f130'),
+        'report': ('icon' '\f131'),
+        'search': ('icon' '\f132'),
+        'stop': ('icon' '\f133'),
+        'tag': ('icon' '\f134'),
+        'triangle-down': ('icon' '\f135'),
+        'triangle-left': ('icon' '\f136'),
+        'triangle-right': ('icon' '\f137'),
+        'triangle-up': ('icon' '\f138'),
+        'twitter-square': ('icon' '\f139'),
+        'twitter': ('icon' '\f13a'),
+        'warning': ('icon' '\f13b'),
+        'x': ('icon' '\f13c'),
 ));
 
 @mixin webfont-icon($name) {
@@ -425,87 +426,94 @@ $webfont-icons: map-merge($webfont-icons, (
     %icon-plus {
         content: "\f12f";
     }
-    .icon-report:before {
+    .icon-point:before {
         content: "\f130";
+        vertical-align: bottom;
+    }
+    %icon-point {
+        content: "\f130";
+    }
+    .icon-report:before {
+        content: "\f131";
         vertical-align: bottom;
     }
     %icon-report {
-        content: "\f130";
+        content: "\f131";
     }
     .icon-search:before {
-        content: "\f131";
+        content: "\f132";
         vertical-align: bottom;
     }
     %icon-search {
-        content: "\f131";
+        content: "\f132";
     }
     .icon-stop:before {
-        content: "\f132";
+        content: "\f133";
         vertical-align: bottom;
     }
     %icon-stop {
-        content: "\f132";
+        content: "\f133";
     }
     .icon-tag:before {
-        content: "\f133";
+        content: "\f134";
         vertical-align: bottom;
     }
     %icon-tag {
-        content: "\f133";
+        content: "\f134";
     }
     .icon-triangle-down:before {
-        content: "\f134";
+        content: "\f135";
         vertical-align: bottom;
     }
     %icon-triangle-down {
-        content: "\f134";
+        content: "\f135";
     }
     .icon-triangle-left:before {
-        content: "\f135";
+        content: "\f136";
         vertical-align: bottom;
     }
     %icon-triangle-left {
-        content: "\f135";
+        content: "\f136";
     }
     .icon-triangle-right:before {
-        content: "\f136";
+        content: "\f137";
         vertical-align: bottom;
     }
     %icon-triangle-right {
-        content: "\f136";
+        content: "\f137";
     }
     .icon-triangle-up:before {
-        content: "\f137";
+        content: "\f138";
         vertical-align: bottom;
     }
     %icon-triangle-up {
-        content: "\f137";
+        content: "\f138";
     }
     .icon-twitter-square:before {
-        content: "\f138";
+        content: "\f139";
         vertical-align: bottom;
     }
     %icon-twitter-square {
-        content: "\f138";
+        content: "\f139";
     }
     .icon-twitter:before {
-        content: "\f139";
+        content: "\f13a";
         vertical-align: bottom;
     }
     %icon-twitter {
-        content: "\f139";
+        content: "\f13a";
     }
     .icon-warning:before {
-        content: "\f13a";
+        content: "\f13b";
         vertical-align: bottom;
     }
     %icon-warning {
-        content: "\f13a";
+        content: "\f13b";
     }
     .icon-x:before {
-        content: "\f13b";
+        content: "\f13c";
         vertical-align: bottom;
     }
     %icon-x {
-        content: "\f13b";
+        content: "\f13c";
     }

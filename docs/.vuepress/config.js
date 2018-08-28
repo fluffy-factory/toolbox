@@ -47,6 +47,8 @@ module.exports = {
           collapsable: true,
           children: [
             'utils/setRequiredFields',
+            'utils/debounce',
+            'utils/throttle',
           ]
         }],
       // fallback
