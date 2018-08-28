@@ -4,6 +4,11 @@ module.exports = {
   theme: '',
   title: 'Toolbox',
   configureWebpack: {
+    resolve: {
+      alias: {
+        'velocity': 'velocity-animate'
+      }
+    }
   },
   themeConfig: {
     nav: [
