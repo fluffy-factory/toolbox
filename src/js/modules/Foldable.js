@@ -16,7 +16,7 @@ export class Foldable {
         e.preventDefault();
       }
       if (this.eventType === 'change') {
-        this.trigger.disabled = true;
+        this.trigger.forEach((trigger) => trigger.disabled = true);
       }
       this.toggle();
     };
@@ -82,7 +82,7 @@ export class Foldable {
   execOpen () {
     if (this.openCallback !== null && typeof this.openCallback === 'function') {
       this.openCallback.call(this, {
-        trigger: this.trigger,
+        trigger: this.trigger.length > 1 ?  this.trigger : this.trigger[0],
         target: this.target,
         done: () => this.done()
       });
@@ -97,7 +97,7 @@ export class Foldable {
   execClose () {
     if (this.closeCallback !== null && typeof this.closeCallback === 'function') {
       this.closeCallback.call(this, {
-        trigger: this.trigger,
+        trigger: this.trigger.length > 1 ?  this.trigger : this.trigger[0],
         target: this.target,
         done: () => this.done()
       });
@@ -128,7 +128,7 @@ export class Foldable {
   done () {
     this.isAnimated = false;
     if (this.eventType === 'change') {
-      this.trigger.disabled = false;
+      this.trigger.forEach((trigger) => trigger.disabled = false);
     }
   }
 

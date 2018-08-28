@@ -62,7 +62,7 @@
     }
 
     .target {
-        //display: none;
+        display: none;
         padding: 20px;
         border: 1px solid  $color-grey;
         background-color: $color-grey-light;
@@ -71,7 +71,6 @@
     ul {
         @extend .list-reset;
     }
-
 </style>
 
 <script>
@@ -80,17 +79,27 @@
 
     export default {
       mounted () {
-        // Animation
+        // Change event
         const foldableChange = new Foldable({
-          eventType: 'change',
-          trigger: document.querySelectorAll('.js-trigger-checkbox'),
-          target: document.getElementById('js-target-checbox'),
-          openCallback: ({trigger, target, done}) => {
-
-           },
-          closeCallback: ({trigger, target, done}) => {
-
-          }
+            eventType: 'change',
+            trigger: document.querySelectorAll('.js-trigger-checkbox'),
+            target: document.getElementById('js-target-checkbox'),
+            openCallback: ({trigger, target, done}) => {
+              if (trigger.checked) {
+                Velocity(target, 'slideDown', {
+                  duration: 600,
+                  complete: () => done()
+                });
+              }
+            },
+            closeCallback: ({trigger, target, done}) => {
+              if (!trigger.checked) {
+                Velocity(target, 'slideUp', {
+                  duration: 600,
+                  complete: () => done()
+                });
+              }
+            }
         });
       }
     }

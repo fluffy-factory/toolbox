@@ -5,7 +5,7 @@
 **Config:**
 ```js
 {
-  eventType: 'click', // string
+  eventType: 'click', // string, possible value click or change
   trigger: [], // HTMLElement[] || NodeList
   target: null, // HTMLElement
   breakpoint: {
@@ -24,7 +24,7 @@ No animation, just add attribute style with ``display: none|block`` on the targe
 <Foldable-basic></Foldable-basic>
 
 ## Animation
-if you want animated the target, Foldable provide **openCallback** and **closeCallback**.  
+if you want to animated the target, Foldable provide **openCallback** and **closeCallback**.  
 You can access to ``trigger, target, done`` Foldable instance with destructuring args:  
 - **trigger** HTMLElement || [...NodeList]  
 - **target** HTMLElement  
@@ -64,7 +64,30 @@ const foldableAnimated = new Foldable({
 ```
 
 ## Change event
-
+You can use Foldable to toggle an element in forms if you need it.
 <br>
 <br>
 <Foldable-change-event></Foldable-change-event>
+
+**Example with Velocity.js**
+```js {6,13}
+const foldableChange = new Foldable({
+	eventType: 'change',
+	trigger: document.querySelectorAll('.js-trigger-checkbox'),
+	target: document.getElementById('js-target-checkbox'),
+	openCallback: ({trigger, target, done}) => {
+	  if (trigger.checked) {
+	    Velocity(target, 'slideDown', {
+	      complete: () => done()
+	    });
+	  }
+	},
+	closeCallback: ({trigger, target, done}) => {
+	  if (!trigger.checked) {
+	    Velocity(target, 'slideDown', {
+	      complete: () => done()
+	    });
+	  }
+	}
+});
+```
