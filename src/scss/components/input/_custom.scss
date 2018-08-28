@@ -1,4 +1,4 @@
-$marg-left-right: 20px;
+$padding-left-right: 20px;
 $marg-top-input: 15px;
 $font-size-icon: $font-size-base;
 
@@ -20,19 +20,19 @@ input[type="url"] {
   .#{unquote($font-icon)} {
     position: absolute;
     top: 50%;
-    right: $marg-left-right;
+    right: $padding-left-right;
     font-size: $font-size-icon;
-    transform: translateY(-50% - #{$marg-top-input});
+    transform: translateY(calc(-50% + #{$marg-top-input}/2));
 
     & + input {
-      padding-right: $marg-left-right*2 + $font-size-icon;
+      padding-right: $padding-left-right*2 + $font-size-icon;
     }
   }
 
   input {
     width: 100%;
     margin-top: $marg-top-input;
-    padding: 18px $marg-left-right 15px $marg-left-right;
+    padding: 18px $padding-left-right 15px $padding-left-right;
     background-color: white;
     &:focus + label {
       transform: translateX(5px);
@@ -43,8 +43,8 @@ input[type="url"] {
     position: absolute;
     top: 0;
     left: 0;
-    margin: 0 $marg-left-right;
-    max-width: calc(100% - #{$marg-left-right});
+    margin: 0 $padding-left-right;
+    max-width: calc(100% - #{$padding-left-right});
     padding: 5px 8px;
     color: white;
     background-color: $color-primary;

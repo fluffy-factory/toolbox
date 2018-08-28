@@ -43,6 +43,14 @@ module.exports = {
           ]
         },
         {
+          title: 'Forms',
+          collapsable: true,
+          children: [
+            'forms/materialinput',
+            'forms/showpassword',
+          ]
+        },
+        {
           title: 'Utils',
           collapsable: true,
           children: [

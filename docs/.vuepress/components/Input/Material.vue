@@ -31,7 +31,9 @@
 
   export default {
     mounted() {
-      new MaterialInput('.input-validate');
+      new MaterialInput({
+        element: document.querySelectorAll('.input-validate')
+      });
     }
   }
 </script>
