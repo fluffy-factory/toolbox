@@ -11,5 +11,3 @@ This toolbox is seperated in three parts for now, that parts are:
 
 Each parts provide many basic components like buttons, form 's elements for **Scss**,
 helpers functions for add some interaction with **Javascript** and in **DevTools** you will find a livereload and iconfont generator.  
-
-Of course is an open source project so your welcome to contribute :tada: :heart_eyes: :tada:
