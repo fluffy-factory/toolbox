@@ -1,9 +1,8 @@
 $pagination-margin-top: 20px;
 
-$pagination-color-base: #232c33;
+$pagination-color-base: $color-black-text;
 $pagination-color-active: #ffffff;
-$pagination-color-hover: #6266cb;
-$pagination-bg-color-hover: #d3eeff;
+$pagination-color-hover: $color-primary;
 
 $icon-collection: ('first', 'prev', 'next', 'last');
 

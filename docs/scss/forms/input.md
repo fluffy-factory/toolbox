@@ -1,11 +1,5 @@
 # Input
 
-Input library with classic and custom example. For use one of input you need import :
-* [variables.scss](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/scss/utils/_variables.scss)
-* [reboot.scss](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/scss/utils/_reboot.scss)
-* [resets.scss](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/scss/utils/_resets.scss)
-* [mixins.scss](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/scss/utils/_mixins.scss)
-
 ## Classic
 <br>
 <Input-Classic></Input-Classic>
@@ -62,6 +56,10 @@ For optimal operation add [MaterialInput.js](/javascript/forms/materialinput.htm
 
 :::tip
 Work with the same design of Material and Custom input
+:::
+
+:::warning
+For optimal operation add [ShowPassword.js](/javascript/forms/showpassword.html)
 :::
 
 ```html
