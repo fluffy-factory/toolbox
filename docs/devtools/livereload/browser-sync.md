@@ -46,7 +46,7 @@ let config = {
   files: ['./dist/**/*.css', './dist/**/*.js', './dist/*.html'],
 };
 
-/* Symfony add but delete ['server']
+/* Symfony add ['proxy'] but delete ['server']
  proxy: "http://url.test",
  files: ['./public/!**!/!*.css', './public/!**!/!*.js', './templates/!**!/!*.html.twig']
  */
