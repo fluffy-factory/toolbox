@@ -139,3 +139,6 @@ $webfont-icons: map-merge($webfont-icons, (
   }
 }
 ```
+
+## Add icons
+To add more icons put them all in the right folder see [folder structure](#folder-structure-for-the-example)
