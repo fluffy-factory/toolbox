@@ -65,7 +65,8 @@ module.exports = {
           ]
         }],
         '/devtools/': [
-          'iconfont/iconfont'
+          'iconfont/iconfont',
+          'livereload/browser-sync'
         ],
         // fallback
         '/': []
