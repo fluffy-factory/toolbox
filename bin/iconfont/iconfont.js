@@ -38,7 +38,7 @@ function getAllFiles() {
   });
   files = files.map((file) => {
     return `${config.dir}/${file}`;
-  })
+  });
   return files;
 }
 

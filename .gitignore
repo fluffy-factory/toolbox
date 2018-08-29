@@ -1,5 +1,4 @@
 .idea
 .vscode
 node_modules
-docs/.vuepress/dist
 docs/.vuepress/public/fonts

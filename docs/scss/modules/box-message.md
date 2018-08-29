@@ -1,5 +1,7 @@
 # Box messages
 
+* [Box-message.scss](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/scss/components/_box-message.scss)
+
 **Types:**  `info` `success` `warning` `error`
 <Box-message type="info"></Box-message>
 <Box-message type="success"></Box-message>
