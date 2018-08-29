@@ -3,10 +3,21 @@
 - :package: [npm package: webfont-generator](https://www.npmjs.com/package/webfonts-generator)
 - [Github src](https://github.com/fluffy-factory/toolbox/tree/master/bin/iconfont)
 
-## Install
+## Setup
 ```bash
 npm i -D webfonts-generator
 yarn add -D webfonts-generator
+```
+**Package.json**
+```json
+{
+  "iconfont": "node bin/iconfont/iconfont.js"
+}
+```
+**Run command**
+```bash
+npm run iconfont
+yarn iconfont
 ```
 
 ## Folder structure for the example
