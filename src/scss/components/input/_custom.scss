@@ -2,6 +2,9 @@ $padding-left-right: 20px;
 $marg-top-input: 15px;
 $font-size-icon: $font-size-base;
 
+$background-label: $color-primary;
+$color-label: white;
+
 @include inputPlaceholder(font-style, italic);
 
 input[type="text"],
@@ -46,8 +49,8 @@ input[type="url"] {
     margin: 0 $padding-left-right;
     max-width: calc(100% - #{$padding-left-right});
     padding: 5px 8px;
-    color: white;
-    background-color: $color-primary;
+    color: $color-label;
+    background-color: $background-label;
     font-size: $font-size-small;
     line-height: 1;
     white-space: nowrap;
