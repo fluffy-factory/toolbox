@@ -1,8 +1,11 @@
 module.exports = {
+  theme: '',
+  title: ' Toolbox',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }]
+  ],
   port: 8088,
   base: '/toolbox/',
-  theme: '',
-  title: '',
   configureWebpack: {},
   themeConfig: {
     logo: '/toolbox_full.svg',
