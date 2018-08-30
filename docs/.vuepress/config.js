@@ -13,6 +13,7 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: 'Scss', link: '/scss/' },
       { text: 'Javascript', link: '/javascript/' },
+      { text: 'Devtools', link: '/devtools/' },
       { text: 'github', link: 'https://github.com/fluffy-factory/toolbox' },
     ],
     sidebar: {
@@ -39,7 +40,8 @@ module.exports = {
           ]
         },
       ],
-      '/javascript/': [{
+      '/javascript/': [
+        {
           title: 'Modules',
           collapsable: true,
           children: [
@@ -64,8 +66,12 @@ module.exports = {
             'utils/throttle',
           ]
         }],
-      // fallback
-      '/': []
+        '/devtools/': [
+          'iconfont/icon-font',
+          'livereload/browser-sync'
+        ],
+        // fallback
+        '/': []
     }
   }
 };

@@ -1,9 +1,9 @@
 @font-face {
     font-family: "icon";
-    src: url("/toolbox/fonts/icon.eot?d07339357aa76429b57369634289c967?#iefix") format("embedded-opentype"),
-url("/toolbox/fonts/icon.woff?d07339357aa76429b57369634289c967") format("woff"),
-url("/toolbox/fonts/icon.ttf?d07339357aa76429b57369634289c967") format("truetype"),
-url("/toolbox/fonts/icon.svg?d07339357aa76429b57369634289c967#icon") format("svg");
+    src: url("/toolbox/fonts/icon.eot?65f15a33a7384e757bf801095d091d8b?#iefix") format("embedded-opentype"),
+url("/toolbox/fonts/icon.woff?65f15a33a7384e757bf801095d091d8b") format("woff"),
+url("/toolbox/fonts/icon.ttf?65f15a33a7384e757bf801095d091d8b") format("truetype"),
+url("/toolbox/fonts/icon.svg?65f15a33a7384e757bf801095d091d8b#icon") format("svg");
 }
 
 @if not variable-exists('webfont-icons') {
@@ -19,60 +19,58 @@ $webfont-icons: map-merge($webfont-icons, (
         'behance-square': ('icon' '\f106'),
         'behance': ('icon' '\f107'),
         'bell': ('icon' '\f108'),
-        'camera': ('icon' '\f109'),
-        'check-circle-o': ('icon' '\f10a'),
-        'check-circle': ('icon' '\f10b'),
-        'check': ('icon' '\f10c'),
-        'chevron-down': ('icon' '\f10d'),
-        'chevron-left-double': ('icon' '\f10e'),
-        'chevron-left': ('icon' '\f10f'),
-        'chevron-right-double': ('icon' '\f110'),
-        'chevron-right': ('icon' '\f111'),
-        'chevron-up': ('icon' '\f112'),
-        'circle-slash': ('icon' '\f113'),
-        'dash': ('icon' '\f114'),
-        'download': ('icon' '\f115'),
-        'exclamation-circle': ('icon' '\f116'),
-        'exclamation-triangle': ('icon' '\f117'),
-        'exclamation': ('icon' '\f118'),
-        'eye': ('icon' '\f119'),
-        'facebook-f': ('icon' '\f11a'),
-        'facebook-official': ('icon' '\f11b'),
-        'facebook-square': ('icon' '\f11c'),
-        'facebook': ('icon' '\f11d'),
-        'file-directory': ('icon' '\f11e'),
-        'file-media': ('icon' '\f11f'),
-        'file': ('icon' '\f120'),
-        'gear': ('icon' '\f121'),
-        'google-plus-square': ('icon' '\f122'),
-        'google-plus': ('icon' '\f123'),
-        'google': ('icon' '\f124'),
-        'heart': ('icon' '\f125'),
-        'info-circle': ('icon' '\f126'),
-        'info': ('icon' '\f127'),
-        'instagram': ('icon' '\f128'),
-        'link-external': ('icon' '\f129'),
-        'linkedin-square': ('icon' '\f12a'),
-        'linkedin': ('icon' '\f12b'),
-        'location': ('icon' '\f12c'),
-        'lock': ('icon' '\f12d'),
-        'organization': ('icon' '\f12e'),
-        'person': ('icon' '\f12f'),
-        'plus-small': ('icon' '\f130'),
-        'plus': ('icon' '\f131'),
-        'point': ('icon' '\f132'),
-        'report': ('icon' '\f133'),
-        'search': ('icon' '\f134'),
-        'stop': ('icon' '\f135'),
-        'tag': ('icon' '\f136'),
-        'triangle-down': ('icon' '\f137'),
-        'triangle-left': ('icon' '\f138'),
-        'triangle-right': ('icon' '\f139'),
-        'triangle-up': ('icon' '\f13a'),
-        'twitter-square': ('icon' '\f13b'),
-        'twitter': ('icon' '\f13c'),
-        'warning': ('icon' '\f13d'),
-        'x': ('icon' '\f13e'),
+        'check-circle-o': ('icon' '\f109'),
+        'check-circle': ('icon' '\f10a'),
+        'check': ('icon' '\f10b'),
+        'chevron-down': ('icon' '\f10c'),
+        'chevron-left-double': ('icon' '\f10d'),
+        'chevron-left': ('icon' '\f10e'),
+        'chevron-right-double': ('icon' '\f10f'),
+        'chevron-right': ('icon' '\f110'),
+        'chevron-up': ('icon' '\f111'),
+        'circle-slash': ('icon' '\f112'),
+        'dash': ('icon' '\f113'),
+        'exclamation-circle': ('icon' '\f114'),
+        'exclamation-triangle': ('icon' '\f115'),
+        'exclamation': ('icon' '\f116'),
+        'eye': ('icon' '\f117'),
+        'facebook-f': ('icon' '\f118'),
+        'facebook-official': ('icon' '\f119'),
+        'facebook-square': ('icon' '\f11a'),
+        'facebook': ('icon' '\f11b'),
+        'file-directory': ('icon' '\f11c'),
+        'file-media': ('icon' '\f11d'),
+        'file': ('icon' '\f11e'),
+        'gear': ('icon' '\f11f'),
+        'google-plus-square': ('icon' '\f120'),
+        'google-plus': ('icon' '\f121'),
+        'google': ('icon' '\f122'),
+        'heart': ('icon' '\f123'),
+        'info-circle': ('icon' '\f124'),
+        'info': ('icon' '\f125'),
+        'instagram': ('icon' '\f126'),
+        'link-external': ('icon' '\f127'),
+        'linkedin-square': ('icon' '\f128'),
+        'linkedin': ('icon' '\f129'),
+        'location': ('icon' '\f12a'),
+        'lock': ('icon' '\f12b'),
+        'organization': ('icon' '\f12c'),
+        'person': ('icon' '\f12d'),
+        'plus-small': ('icon' '\f12e'),
+        'plus': ('icon' '\f12f'),
+        'point': ('icon' '\f130'),
+        'report': ('icon' '\f131'),
+        'search': ('icon' '\f132'),
+        'stop': ('icon' '\f133'),
+        'tag': ('icon' '\f134'),
+        'triangle-down': ('icon' '\f135'),
+        'triangle-left': ('icon' '\f136'),
+        'triangle-right': ('icon' '\f137'),
+        'triangle-up': ('icon' '\f138'),
+        'twitter-square': ('icon' '\f139'),
+        'twitter': ('icon' '\f13a'),
+        'warning': ('icon' '\f13b'),
+        'x': ('icon' '\f13c'),
 ));
 
 @mixin webfont-icon($name) {
@@ -103,6 +101,7 @@ $webfont-icons: map-merge($webfont-icons, (
         content: "\f101";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-alert {
         content: "\f101";
     }
@@ -110,6 +109,7 @@ $webfont-icons: map-merge($webfont-icons, (
         content: "\f102";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-arrow-long-down {
         content: "\f102";
     }
@@ -117,6 +117,7 @@ $webfont-icons: map-merge($webfont-icons, (
         content: "\f103";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-arrow-long-left {
         content: "\f103";
     }
@@ -124,6 +125,7 @@ $webfont-icons: map-merge($webfont-icons, (
         content: "\f104";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-arrow-long-right {
         content: "\f104";
     }
@@ -131,6 +133,7 @@ $webfont-icons: map-merge($webfont-icons, (
         content: "\f105";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-arrow-long-up {
         content: "\f105";
     }
@@ -138,6 +141,7 @@ $webfont-icons: map-merge($webfont-icons, (
         content: "\f106";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-behance-square {
         content: "\f106";
     }
@@ -145,6 +149,7 @@ $webfont-icons: map-merge($webfont-icons, (
         content: "\f107";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-behance {
         content: "\f107";
     }
@@ -152,384 +157,423 @@ $webfont-icons: map-merge($webfont-icons, (
         content: "\f108";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-bell {
         content: "\f108";
     }
-    .icon-camera:before {
-        content: "\f109";
-        vertical-align: bottom;
-    }
-    %icon-camera {
-        content: "\f109";
-    }
     .icon-check-circle-o:before {
-        content: "\f10a";
+        content: "\f109";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-check-circle-o {
-        content: "\f10a";
+        content: "\f109";
     }
     .icon-check-circle:before {
-        content: "\f10b";
+        content: "\f10a";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-check-circle {
-        content: "\f10b";
+        content: "\f10a";
     }
     .icon-check:before {
-        content: "\f10c";
+        content: "\f10b";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-check {
-        content: "\f10c";
+        content: "\f10b";
     }
     .icon-chevron-down:before {
-        content: "\f10d";
+        content: "\f10c";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-chevron-down {
-        content: "\f10d";
+        content: "\f10c";
     }
     .icon-chevron-left-double:before {
-        content: "\f10e";
+        content: "\f10d";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-chevron-left-double {
-        content: "\f10e";
+        content: "\f10d";
     }
     .icon-chevron-left:before {
-        content: "\f10f";
+        content: "\f10e";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-chevron-left {
-        content: "\f10f";
+        content: "\f10e";
     }
     .icon-chevron-right-double:before {
-        content: "\f110";
+        content: "\f10f";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-chevron-right-double {
-        content: "\f110";
+        content: "\f10f";
     }
     .icon-chevron-right:before {
-        content: "\f111";
+        content: "\f110";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-chevron-right {
-        content: "\f111";
+        content: "\f110";
     }
     .icon-chevron-up:before {
-        content: "\f112";
+        content: "\f111";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-chevron-up {
-        content: "\f112";
+        content: "\f111";
     }
     .icon-circle-slash:before {
-        content: "\f113";
+        content: "\f112";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-circle-slash {
-        content: "\f113";
+        content: "\f112";
     }
     .icon-dash:before {
-        content: "\f114";
+        content: "\f113";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-dash {
-        content: "\f114";
-    }
-    .icon-download:before {
-        content: "\f115";
-        vertical-align: bottom;
-    }
-    %icon-download {
-        content: "\f115";
+        content: "\f113";
     }
     .icon-exclamation-circle:before {
-        content: "\f116";
+        content: "\f114";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-exclamation-circle {
-        content: "\f116";
+        content: "\f114";
     }
     .icon-exclamation-triangle:before {
-        content: "\f117";
+        content: "\f115";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-exclamation-triangle {
-        content: "\f117";
+        content: "\f115";
     }
     .icon-exclamation:before {
-        content: "\f118";
+        content: "\f116";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-exclamation {
-        content: "\f118";
+        content: "\f116";
     }
     .icon-eye:before {
-        content: "\f119";
+        content: "\f117";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-eye {
-        content: "\f119";
+        content: "\f117";
     }
     .icon-facebook-f:before {
-        content: "\f11a";
+        content: "\f118";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-facebook-f {
-        content: "\f11a";
+        content: "\f118";
     }
     .icon-facebook-official:before {
-        content: "\f11b";
+        content: "\f119";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-facebook-official {
-        content: "\f11b";
+        content: "\f119";
     }
     .icon-facebook-square:before {
-        content: "\f11c";
+        content: "\f11a";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-facebook-square {
-        content: "\f11c";
+        content: "\f11a";
     }
     .icon-facebook:before {
-        content: "\f11d";
+        content: "\f11b";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-facebook {
-        content: "\f11d";
+        content: "\f11b";
     }
     .icon-file-directory:before {
-        content: "\f11e";
+        content: "\f11c";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-file-directory {
-        content: "\f11e";
+        content: "\f11c";
     }
     .icon-file-media:before {
-        content: "\f11f";
+        content: "\f11d";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-file-media {
-        content: "\f11f";
+        content: "\f11d";
     }
     .icon-file:before {
-        content: "\f120";
+        content: "\f11e";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-file {
-        content: "\f120";
+        content: "\f11e";
     }
     .icon-gear:before {
-        content: "\f121";
+        content: "\f11f";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-gear {
-        content: "\f121";
+        content: "\f11f";
     }
     .icon-google-plus-square:before {
-        content: "\f122";
+        content: "\f120";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-google-plus-square {
-        content: "\f122";
+        content: "\f120";
     }
     .icon-google-plus:before {
-        content: "\f123";
+        content: "\f121";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-google-plus {
-        content: "\f123";
+        content: "\f121";
     }
     .icon-google:before {
-        content: "\f124";
+        content: "\f122";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-google {
-        content: "\f124";
+        content: "\f122";
     }
     .icon-heart:before {
-        content: "\f125";
+        content: "\f123";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-heart {
-        content: "\f125";
+        content: "\f123";
     }
     .icon-info-circle:before {
-        content: "\f126";
+        content: "\f124";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-info-circle {
-        content: "\f126";
+        content: "\f124";
     }
     .icon-info:before {
-        content: "\f127";
+        content: "\f125";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-info {
-        content: "\f127";
+        content: "\f125";
     }
     .icon-instagram:before {
-        content: "\f128";
+        content: "\f126";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-instagram {
-        content: "\f128";
+        content: "\f126";
     }
     .icon-link-external:before {
-        content: "\f129";
+        content: "\f127";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-link-external {
-        content: "\f129";
+        content: "\f127";
     }
     .icon-linkedin-square:before {
-        content: "\f12a";
+        content: "\f128";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-linkedin-square {
-        content: "\f12a";
+        content: "\f128";
     }
     .icon-linkedin:before {
-        content: "\f12b";
+        content: "\f129";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-linkedin {
-        content: "\f12b";
+        content: "\f129";
     }
     .icon-location:before {
-        content: "\f12c";
+        content: "\f12a";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-location {
-        content: "\f12c";
+        content: "\f12a";
     }
     .icon-lock:before {
-        content: "\f12d";
+        content: "\f12b";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-lock {
-        content: "\f12d";
+        content: "\f12b";
     }
     .icon-organization:before {
-        content: "\f12e";
+        content: "\f12c";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-organization {
-        content: "\f12e";
+        content: "\f12c";
     }
     .icon-person:before {
-        content: "\f12f";
+        content: "\f12d";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-person {
-        content: "\f12f";
+        content: "\f12d";
     }
     .icon-plus-small:before {
-        content: "\f130";
+        content: "\f12e";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-plus-small {
-        content: "\f130";
+        content: "\f12e";
     }
     .icon-plus:before {
-        content: "\f131";
+        content: "\f12f";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-plus {
-        content: "\f131";
+        content: "\f12f";
     }
     .icon-point:before {
-        content: "\f132";
+        content: "\f130";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-point {
-        content: "\f132";
+        content: "\f130";
     }
     .icon-report:before {
-        content: "\f133";
+        content: "\f131";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-report {
-        content: "\f133";
+        content: "\f131";
     }
     .icon-search:before {
-        content: "\f134";
+        content: "\f132";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-search {
-        content: "\f134";
+        content: "\f132";
     }
     .icon-stop:before {
-        content: "\f135";
+        content: "\f133";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-stop {
-        content: "\f135";
+        content: "\f133";
     }
     .icon-tag:before {
-        content: "\f136";
+        content: "\f134";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-tag {
-        content: "\f136";
+        content: "\f134";
     }
     .icon-triangle-down:before {
-        content: "\f137";
+        content: "\f135";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-triangle-down {
-        content: "\f137";
+        content: "\f135";
     }
     .icon-triangle-left:before {
-        content: "\f138";
+        content: "\f136";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-triangle-left {
-        content: "\f138";
+        content: "\f136";
     }
     .icon-triangle-right:before {
-        content: "\f139";
+        content: "\f137";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-triangle-right {
-        content: "\f139";
+        content: "\f137";
     }
     .icon-triangle-up:before {
-        content: "\f13a";
+        content: "\f138";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-triangle-up {
-        content: "\f13a";
+        content: "\f138";
     }
     .icon-twitter-square:before {
-        content: "\f13b";
+        content: "\f139";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-twitter-square {
-        content: "\f13b";
+        content: "\f139";
     }
     .icon-twitter:before {
-        content: "\f13c";
+        content: "\f13a";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-twitter {
-        content: "\f13c";
+        content: "\f13a";
     }
     .icon-warning:before {
-        content: "\f13d";
+        content: "\f13b";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-warning {
-        content: "\f13d";
+        content: "\f13b";
     }
     .icon-x:before {
-        content: "\f13e";
+        content: "\f13c";
         vertical-align: bottom;
     }
+    // To extend just the codepoint if you need it
     %icon-x {
-        content: "\f13e";
+        content: "\f13c";
     }

@@ -1,6 +1,6 @@
 # Foldable.js
 
-
+* [Foldable.js](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/js/modules/Foldable.js)
 
 **Config:**
 ```js
