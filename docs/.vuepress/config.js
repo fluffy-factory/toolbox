@@ -35,6 +35,7 @@ module.exports = {
             'forms/',
             'forms/checkboxes-radios',
             'forms/input',
+            'forms/inputfile',
           ]
         },
       ],
@@ -51,6 +52,7 @@ module.exports = {
           children: [
             'forms/materialinput',
             'forms/showpassword',
+            'forms/inputfile',
           ]
         },
         {

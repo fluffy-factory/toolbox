@@ -1,0 +1,12 @@
+input[type="file"]::-webkit-file-upload-button {
+  appearance: none;
+  cursor: pointer;
+  color: white;
+  background-color: $color-primary;
+  padding: 5px 15px;
+  border: 0;
+  transition: background-color $duration $easeInOutCubic;
+  &:hover {
+    background-color: darken($color-primary, 10%);
+  }
+}

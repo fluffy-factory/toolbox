@@ -1,4 +1,4 @@
-# Material Input
+# :control_knobs: MaterialInput.js
 
 ## Config
 ```js

@@ -1,10 +1,9 @@
 <template>
     <div>
         <div class="bg-grey">
-            <div class="input-validate">
-                <i class="icon icon-lock"></i>
-                <input type="text" id="text" name="text">
-                <label for="text">Input text</label>
+            <div class="input-file">
+                <input type="file" id="file2" data-multiple-caption="{count} files selected" multiple>
+                <label for="file2"><i class="icon icon-download"></i><span>Choice file</span></label>
             </div>
         </div>
     </div>
@@ -17,7 +16,8 @@
     @import 'src/scss/utils/easing';
     @import 'src/scss/utils/mixins';
     @import 'src/scss/typography/iconfont';
-    @import 'src/scss/components/input/material';
+    @import 'src/scss/components/forms';
+    @import 'src/scss/components/inputfile/custom';
 
     .bg-grey {
         background-color: $color-grey;
@@ -26,13 +26,11 @@
 </style>
 
 <script>
-  import {MaterialInput} from '../../../../src/js/forms/MaterialInput';
+  import {inputFile} from "../../../../src/js/forms/inputFile";
 
   export default {
     mounted() {
-      new MaterialInput({
-        element: document.querySelectorAll('.input-validate')
-      });
+        inputFile('.input-file');
     }
   }
 </script>

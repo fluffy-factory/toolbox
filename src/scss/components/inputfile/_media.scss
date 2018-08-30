@@ -1,0 +1,45 @@
+$media-color: $color-grey-dark;
+$font-size-icon: 35px;
+
+%media-icon {
+  @extend %icon-camera;
+}
+
+.input-media {
+
+  input[type='file'] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  label {
+    position: relative;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    color: $media-color;
+    border: 2px solid;
+    border-radius: 100%;
+    background-size: cover;
+
+    &:before {
+      @extend %media-icon;
+      font-family: $font-icon;
+      font-size: $font-size-icon;
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.dragover {
+      color: $color-primary;
+    }
+  }
+
+}

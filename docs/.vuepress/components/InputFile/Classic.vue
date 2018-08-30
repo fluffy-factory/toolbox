@@ -1,9 +1,8 @@
 <template>
     <div>
-        <div class="input-container">
-            <i class="icon icon-alert"></i>
-            <input type="text" id="text2" name="text2" placeholder="Input text">
-            <label for="text2">Input text</label>
+        <div class="bg-grey">
+            <label for="file">Input file</label>
+            <input type="file" id="file">
         </div>
     </div>
 </template>
@@ -16,5 +15,10 @@
     @import 'src/scss/utils/mixins';
     @import 'src/scss/typography/iconfont';
     @import 'src/scss/components/forms';
-    @import 'src/scss/components/input/custom';
+    @import 'src/scss/components/inputfile/classic';
+
+    .bg-grey {
+        background-color: $color-grey;
+        padding: 15px;
+    }
 </style>

@@ -1,4 +1,4 @@
-# Show password
+# :eyes: showPassword()
 
 ## Config
 ```js

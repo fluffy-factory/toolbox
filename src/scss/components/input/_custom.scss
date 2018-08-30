@@ -3,6 +3,7 @@ $marg-top-input: 15px;
 $font-size-icon: $font-size-base;
 
 $background-label: $color-primary;
+$background-disabled-label: $color-grey;
 $color-label: white;
 
 @include inputPlaceholder(font-style, italic);
@@ -15,6 +16,13 @@ input[type='datetime'],
 input[type="search"],
 input[type="url"] {
   @extend .input-reset;
+  &:disabled {
+    background-color: $background-disabled-label;
+
+    & + label {
+      background-color: darken($background-disabled-label, 50%);
+    }
+  }
 }
 
 .input-container {

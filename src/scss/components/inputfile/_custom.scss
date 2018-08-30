@@ -1,0 +1,36 @@
+$background-label: $color-primary;
+$color-label: white;
+
+.input-file {
+
+  input[type='file'] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 10px;
+    color: $color-label;
+    background-color: $background-label;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+
+    & > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+}

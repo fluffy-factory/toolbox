@@ -1,11 +1,8 @@
 <template>
     <div>
-        <div class="bg-grey">
-            <div class="input-validate">
-                <i class="icon icon-lock"></i>
-                <input type="text" id="text" name="text">
-                <label for="text">Input text</label>
-            </div>
+        <div class="input-media">
+            <input type="file" id="file3">
+            <label for="file3"></label>
         </div>
     </div>
 </template>
@@ -17,7 +14,8 @@
     @import 'src/scss/utils/easing';
     @import 'src/scss/utils/mixins';
     @import 'src/scss/typography/iconfont';
-    @import 'src/scss/components/input/material';
+    @import 'src/scss/components/forms';
+    @import 'src/scss/components/inputfile/media';
 
     .bg-grey {
         background-color: $color-grey;
@@ -26,12 +24,13 @@
 </style>
 
 <script>
-  import {MaterialInput} from '../../../../src/js/forms/MaterialInput';
+  import {InputMedia} from "../../../../src/js/forms/InputMedia";
 
   export default {
     mounted() {
-      new MaterialInput({
-        element: document.querySelectorAll('.input-validate')
+      new InputMedia({
+        element: document.querySelectorAll('.input-media'),
+        drag: true
       });
     }
   }

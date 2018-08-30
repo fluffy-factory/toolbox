@@ -2,6 +2,8 @@ $padding-left-right: 20px;
 $padding-bottom: 10px;
 $padding-top: 30px;
 
+$background-disabled-label: $color-grey;
+
 @include inputPlaceholder(font-style, italic);
 
 input[type="text"],
@@ -12,6 +14,9 @@ input[type='datetime'],
 input[type="search"],
 input[type="url"] {
   @extend .input-reset;
+  &:disabled {
+    background-color: $background-disabled-label;
+  }
 }
 
 .input-validate {
