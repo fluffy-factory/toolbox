@@ -36,14 +36,12 @@
         const scrollspy = new Scrollspy({
           navLinks: document.querySelectorAll('.js-scrollspy-link'),
           activeCallback: ({target}) => {
-            console.log(target);
             target.classList.add('is-active')
           },
           notActiveCallback: ({target}) => {
             target.classList.remove('is-active')
           }
         });
-        console.log(scrollspy.data);
     }
   }
 </script>
@@ -71,13 +69,27 @@
     }
 
     .scrollspy-target {
+        border: 1px solid;
         padding: 20px;
-        margin: 100px auto;
+        margin: 500px auto;
         opacity: 0;
-        transition-duration: 500ms;
+        transition-duration: 1000ms;
+
+        &:nth-child(odd) {
+            background-color: $color-primary;
+            color: $color-white;
+            transform: translateX(300px);
+        }
+
+        &:nth-child(even) {
+            background-color: $color-secondary;
+            transform: translateX(-300px);
+        }
 
         &.is-active {
             opacity: 1;
+            transform: translateX(0);
         }
+
     }
 </style>

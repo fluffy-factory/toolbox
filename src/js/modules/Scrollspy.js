@@ -2,17 +2,24 @@ export class Scrollspy {
 
   constructor (config) {
 
-    this._config = config || {};
+    let defaults = {
+      navLinks: null,
+      activeClass: 'is-active',
+      activeZoneOffset: 0,
+      activeCallback: null,
+      notActiveCallback: null,
+    };
+
+    this.config = {...defaults, ...config};
     this._docHeight = document.documentElement.scrollHeight;
     this._winHeight = window.innerHeight;
 
-    this.navLinks = config.navLinks || null;
-    this.activeClass = config.activeClass || 'is-active';
-    this.activeZoneOffset = config.activeZoneOffset || 0;
-    this.activeCallback = config.activeCallback || null;
-    this.notActiveCallback = config.notActiveCallback || null;
+    this.navLinks = [...this.config.navLinks];
+    this.activeClass = this.config.activeClass;
+    this.activeZoneOffset = this.config.activeZoneOffset;
+    this.activeCallback = this.config.activeCallback;
+    this.notActiveCallback = this.config.notActiveCallback;
 
-    this.targetsIds = [];
     this.targets = [];
     this.targetsOffsets = [];
     this.data = [];
@@ -30,10 +37,8 @@ export class Scrollspy {
    */
   static getOffsetTop (el, parent) {
     let rect = el.getBoundingClientRect();
-    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return rect.top + scrollTop;
-    //return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
   }
 
   static throttle (callback, delay) {
@@ -76,7 +81,7 @@ export class Scrollspy {
    * Check if the document.documentElement.scrollHeight has changed.
    * @returns {boolean}
    * */
-  heightHasChanged() {
+  heightHasChanged () {
     return this._docHeight !== document.documentElement.scrollHeight || this._winHeight !== window.innerHeight;
   }
 
@@ -86,6 +91,7 @@ export class Scrollspy {
         new Error('navLinks must be a NodeList.');
       } else {
         this.updateAllData();
+
         // Computed the targets 's positions if the viewport height has changed.
         window.addEventListener('resize', Scrollspy.debounce(() => {
           if (this.heightHasChanged()) {
@@ -99,6 +105,7 @@ export class Scrollspy {
         window.addEventListener('scroll', Scrollspy.throttle(() => {
           this.spy(window.pageYOffset);
         }, 50));
+
         this.spy(window.pageYOffset);
       }
     } catch (err) {
@@ -107,33 +114,23 @@ export class Scrollspy {
   }
 
   /**
-   *  Get all ids
-   * @returns {string[]}
-   */
-  stockTargetsIds () {
-    return [...this.navLinks].map((link) => link.getAttribute('href'));
-  }
-
-  /**
    *
-   * @returns {(HTMLElementTagNameMap[T] | null)[]}
+   * @returns {(HTMLElement | null)[]}
    */
-  stockTargetsNodes () {
-    return this.targetsIds.map((idSelector) => document.querySelector(idSelector));
+  stockTargetsNodes (links) {
+    return links.map((link) => link.getAttribute('href')).map((idSelector) => document.querySelector(idSelector));
   }
 
   /**
    * Get target's offsetTop
-   * @returns {number[]}
+   * @param targetsArray
+   * @returns {*}
    */
-  stockOffsets () {
-    return this.targets.map((targetNode) => {
-      return Scrollspy.getOffsetTop(targetNode, document.body);
-    });
+  stockOffsets (targetsArray) {
+    return targetsArray.map((targetNode) => Scrollspy.getOffsetTop(targetNode, document.body));
   }
 
   assembleAllData () {
-    this.data = [];
     let windowHeight = window.innerHeight;
     let data;
     for (let i = 0; i < this.navLinks.length; i++) {
@@ -145,8 +142,7 @@ export class Scrollspy {
           start: (this.targetsOffsets[i] - windowHeight),
           end: (this.targetsOffsets[i] + this.targets[i].offsetHeight)
         },
-        callbackActiveExecuted: false, // To call callback once
-        callbackDisableExecuted: false, // To call callback once
+        active: false
       };
       this.data.push(data);
     }
@@ -157,11 +153,21 @@ export class Scrollspy {
    * After get all data assemble them
    */
   updateAllData () {
-    this.targetsIds = this.stockTargetsIds();
-    this.targets = this.stockTargetsNodes();
-    this.targetsOffsets = this.stockOffsets();
+    this.targets = this.stockTargetsNodes(this.navLinks);
+    this.targetsOffsets = this.stockOffsets(this.targets);
     // then assemble all together
     this.assembleAllData();
+  }
+
+  /**
+   *
+   * @param {Function} fn
+   * @param {Object} current
+   * @param {HTMLElement} current.link
+   * @param {HTMLElement} current.target
+   */
+  execCallback (fn, current) {
+    fn.call(this, {link: current.link, target: current.target})
   }
 
   /**
@@ -172,30 +178,31 @@ export class Scrollspy {
   spy (scrollPosY) {
     let i = 0;
     let len = this.data.length;
+
     for (i; i < len; i++) {
-      const current = this.data[i];
-      let inView = Scrollspy.inActiveArea(scrollPosY, current.area);
+      let current = this.data[i];
+      let inView = Scrollspy.inActiveArea(scrollPosY, current.activeArea);
+
       if (inView) {
         // in activeArea
-        current.link.classList.add(this.activeClass);
-        if (this.activeLinks.indexOf(current.link) === -1 && this.activeCallback !== null && !current.callbackActiveExecuted) {
-          this.activeCallback.call(this, {link: current.link, target: current.target});
-          current.callbackActiveExecuted = true;
-          current.callbackDisableExecuted = false;
+        if (!current.active) {
+          this.execCallback(this.activeCallback, current);
         }
-        this.activeLinks.push(current.link);
+        current.active = inView;
+        current.link.classList.add(this.activeClass);
       } else {
         // out activeArea
-        let currentIndexActive = this.activeLinks.indexOf(current.link);
-        if (this.activeLinks.indexOf(current.link) !== -1 && this.notActiveCallback !== null && !current.callbackDisableExecuted) {
-          this.notActiveCallback.call(this, {link: current.link, target: current.target});
-          current.callbackActiveExecuted = false;
-          current.callbackDisableExecuted = true;
+        if (current.active) {
+          this.execCallback(this.notActiveCallback, current);
         }
-        this.activeLinks = this.activeLinks.slice(currentIndexActive);
+        current.active = false;
         current.link.classList.remove(this.activeClass);
       }
+
     }
+
+    console.log('DATA', this.data);
+
   }
 
 }
