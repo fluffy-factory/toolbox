@@ -89,13 +89,15 @@ export class Scrollspy {
       if (!this.navLinks instanceof NodeList) {
         new Error('navLinks must be a NodeList.');
       } else {
+
         this.updateAllData();
+        this.spy(window.pageYOffset);
 
         // Computed the targets 's positions if the viewport height has changed.
         window.addEventListener('resize', Scrollspy.debounce(() => {
           if (this.heightHasChanged()) {
             this._docHeight = document.documentElement.scrollHeight;
-            this._winHeight = innerHeight;
+            this._winHeight = window.innerHeight;
             this.updateAllData();
             this.spy(window.pageYOffset);
           }
@@ -105,7 +107,6 @@ export class Scrollspy {
           this.spy(window.pageYOffset);
         }, 50));
 
-        this.spy(window.pageYOffset);
       }
     } catch (err) {
       throw err;
@@ -130,6 +131,7 @@ export class Scrollspy {
   }
 
   assembleAllData () {
+    this.data = [];
     let windowHeight = window.innerHeight;
     let data;
     for (let i = 0; i < this.navLinks.length; i++) {
@@ -173,7 +175,6 @@ export class Scrollspy {
    *
    * @param {number} scrollPosY
    */
-  // TODO: Split into small functions
   spy (scrollPosY) {
     let i = 0;
     let len = this.data.length;
