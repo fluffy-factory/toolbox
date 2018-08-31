@@ -42,3 +42,7 @@
 ```
 
 <<< @/src/scss/components/inputfile/_media.scss
+
+:::warning For use this you need JS
+[InputMedia.js](/javascript/forms/inputmedia.html)
+:::

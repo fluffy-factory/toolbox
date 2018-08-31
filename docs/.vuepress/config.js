@@ -56,6 +56,7 @@ module.exports = {
             'forms/materialinput',
             'forms/showpassword',
             'forms/inputfile',
+            'forms/inputmedia',
           ]
         },
         {

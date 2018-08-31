@@ -32,6 +32,7 @@ $color-box-info: #3498db;
 $color-box-success: #65d269;
 $color-box-warning: #ff7a5a;
 $color-box-error: #ff374d;
+$color-box-text: $color-black-text;
 
 %box-info-icon {
   @extend %icon-info;
