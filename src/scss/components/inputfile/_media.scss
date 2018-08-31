@@ -35,6 +35,13 @@ $font-size-icon: 35px;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      transition: transform $duration $easeInOutCubic;
+    }
+
+    &:hover {
+      &:before {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
     }
 
     &.dragover {
