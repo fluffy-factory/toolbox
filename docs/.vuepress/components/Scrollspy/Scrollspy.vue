@@ -36,9 +36,11 @@
         const scrollspy = new Scrollspy({
           navLinks: document.querySelectorAll('.js-scrollspy-link'),
           activeCallback: ({target}) => {
+            console.log('active');
             target.classList.add('is-active')
           },
           notActiveCallback: ({target}) => {
+            console.log('inactive');
             target.classList.remove('is-active')
           }
         });
