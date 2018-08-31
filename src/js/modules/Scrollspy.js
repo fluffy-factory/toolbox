@@ -3,7 +3,7 @@ export class Scrollspy {
   constructor (config) {
 
     let defaults = {
-      navLinks: null,
+      navLinks: [],
       activeClass: 'is-active',
       activeZoneOffset: 0,
       activeCallback: null,
@@ -32,10 +32,9 @@ export class Scrollspy {
   /**
    *  Retrun the real offset of element, check all parents offsets.
    * @param {HTMLElement} el
-   * @param {HTMLElement} parent
    * @returns {number}
    */
-  static getOffsetTop (el, parent) {
+  static getOffsetTop (el) {
     let rect = el.getBoundingClientRect();
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return rect.top + scrollTop;
@@ -127,7 +126,7 @@ export class Scrollspy {
    * @returns {*}
    */
   stockOffsets (targetsArray) {
-    return targetsArray.map((targetNode) => Scrollspy.getOffsetTop(targetNode, document.body));
+    return targetsArray.map((targetNode) => Scrollspy.getOffsetTop(targetNode));
   }
 
   assembleAllData () {
@@ -200,8 +199,6 @@ export class Scrollspy {
       }
 
     }
-
-    console.log('DATA', this.data);
 
   }
 
