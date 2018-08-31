@@ -9,13 +9,17 @@
     "iconfont": "node bin/iconfont/iconfont.js",
     "build": "node bin/iconfont & cross-env NODE_ENV=prod webpack && rimraf web/build/css/*.js",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "tests": "ava tests/scrollspy.test.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "autoprefixer": "^9.0.1",
-    "babel-core": "^6.26.3",
+    "ava": "1.0.0-beta.8",
     "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
+    "browser-env": "^3.2.5",
     "browser-sync": "^2.24.6",
     "clean-webpack-plugin": "^0.1.19",
     "concurrently": "^3.6.0",

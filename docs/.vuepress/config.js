@@ -46,6 +46,7 @@ module.exports = {
           collapsable: true,
           children: [
             'modules/foldable',
+            'modules/scrollspy',
           ]
         },
         {
