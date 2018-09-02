@@ -42,6 +42,7 @@
             target.classList.remove('is-active')
           }
         });
+        scrollspy.init();
     }
   }
 </script>
@@ -71,7 +72,7 @@
     .scrollspy-target {
         border: 1px solid;
         padding: 20px;
-        margin: 500px auto;
+        margin: 100px auto;
         opacity: 0;
         transition-duration: 1000ms;
 
