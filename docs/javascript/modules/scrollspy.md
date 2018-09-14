@@ -34,8 +34,7 @@ You have access to the curent link and target
 	}
 }
 ```
-<br></br>
+
 ![Scrollspy-offsets](../../.vuepress/public/img/scrollspy-offsets.jpeg)  
-<br></br>
 
 <Scrollspy-Scrollspy></Scrollspy-Scrollspy>

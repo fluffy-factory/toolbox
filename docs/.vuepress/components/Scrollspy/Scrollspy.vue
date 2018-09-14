@@ -16,7 +16,6 @@
 
 <script>
   import {Scrollspy} from '../../../../src/js/modules/Scrollspy';
-  import Velocity from 'velocity-animate';
 
   export default {
     name: "Scrollpsy",
@@ -26,6 +25,7 @@
       }
     },
     mounted () {
+      import ('velocity-animate').then((velocity) => {
         const scrollspy = new Scrollspy({
           activeZoneOffset: {
             start: 60,
@@ -39,10 +39,11 @@
             target.classList.remove('is-active');
           },
           clickCallback: ({targetOffset}) => {
-            Velocity(document.body, 'scroll', {offset: targetOffset - 60, duration: 1000});
+            //Velocity(document.body, 'scroll', {offset: targetOffset - 60, duration: 1000});
           }
         });
         scrollspy.init();
+      });
     }
   }
 </script>
