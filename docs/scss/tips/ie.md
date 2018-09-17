@@ -17,10 +17,10 @@ or you can use mixin
 ```
 
 ```scss
-$ie: '(-ms-high-contrast: none), (-ms-high-contrast: active)';
+$ie: 'all and (-ms-high-contrast: none), (-ms-high-contrast: active)';
 
 @mixin media-for($media) {
-  @media all and #{$media} {
+  @media #{$media} {
     @content;
   }
 }
