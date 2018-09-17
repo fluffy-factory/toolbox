@@ -39,6 +39,13 @@ module.exports = {
             'forms/inputfile',
           ]
         },
+        {
+          title: 'Tips',
+          collapsable: true,
+          children: [
+            'tips/ie'
+          ]
+        }
       ],
       '/javascript/': [
         {
