@@ -54,6 +54,7 @@ module.exports = {
           children: [
             'modules/foldable',
             'modules/scrollspy',
+            'modules/stickyfooter',
           ]
         },
         {
