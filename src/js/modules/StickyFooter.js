@@ -16,6 +16,24 @@ export class StickyFooter {
   }
 
   /**
+   * Exec callback after a timeout of delay
+   * @param {Function} callback
+   * @param {Number} delay
+   * @returns {Function}
+   */
+  static debounce (callback, delay) {
+    let timer;
+    return function (){
+      let args = arguments;
+      let context = this;
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        callback.apply(context, args);
+      }, delay)
+    }
+  }
+
+  /**
    * Return elementSticky's offsetHeight
    * @returns {number}
    */
