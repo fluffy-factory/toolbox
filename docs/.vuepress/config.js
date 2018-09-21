@@ -55,6 +55,7 @@ module.exports = {
             'modules/foldable',
             'modules/scrollspy',
             'modules/stickyfooter',
+            'modules/konami',
           ]
         },
         {
