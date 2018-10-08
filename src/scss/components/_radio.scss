@@ -47,7 +47,9 @@ $radio-text-color-disabled: #9e9e9e;
 
 // Hide the input
 input[type="radio"] {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  text-indent: -9999px;
 }
 
 // Vertical align
