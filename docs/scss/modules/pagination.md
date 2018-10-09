@@ -1,5 +1,6 @@
 # Pagination
 
+## Html structure
 ```html
 <div class="pagination_wrapper">
 	<ul class="pagination">
@@ -16,12 +17,53 @@
 
 ## Classic
 
+* [Pagination-classic.scss](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/scss/components/pagination/_pagination-classic.scss)
+
 <PaginationClassic></PaginationClassic>
 
-<<< @/src/scss/components/pagination/_pagination-classic.scss
+### Extend
+
+```scss
+$pagination-margin-top: 20px;
+
+$pagination-color-base: #949494;
+$pagination-color-active: #ffffff;
+$pagination-color-hover: #6266cb;
+$pagination-bg-color-base: #e7e7e7;
+$pagination-bg-color-active: #6266cb;
+$pagination-bg-color-hover: #d3eeff;
+```
 
 ## Custom
 
+* [Pagination-custom.scss](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/scss/components/pagination/_pagination-custom.scss)
+
 <PaginationCustom></PaginationCustom>
 
-<<< @/src/scss/components/pagination/_pagination-custom.scss
+### Extend
+
+```scss
+$pagination-margin-top: 20px;
+
+$pagination-color-base: $color-black-text;
+$pagination-color-active: #ffffff;
+$pagination-color-hover: $color-primary;
+
+$icon-collection: ('first', 'prev', 'next', 'last');
+
+%pagination-icon-first {
+  @extend %icon-chevron-left-double;
+}
+
+%pagination-icon-prev {
+  @extend %icon-chevron-left;
+}
+
+%pagination-icon-next {
+  @extend %icon-chevron-right;
+}
+
+%pagination-icon-last {
+  @extend %icon-chevron-right-double;
+}
+```
