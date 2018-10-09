@@ -1,6 +1,8 @@
 # Breadcrumb
 
-<Breadcrumb></Breadcrumb>
+* [breadcrumb.scss](https://raw.githubusercontent.com/fluffy-factory/toolbox/master/src/scss/components/_breadcrumb.scss)
+
+## Html structure
 
 ```html
 <nav class="nav-breadcrumb">
@@ -16,4 +18,14 @@
 </nav>
 ```
 
-<<< @/src/scss/components/_breadcrumb.scss
+<Breadcrumb></Breadcrumb>
+
+## Extend
+
+```scss
+$breadcrumb-bg-color: #eeeeee;
+
+%breadcrumb-icon {
+  @extend %icon-chevron-right;
+}
+```
