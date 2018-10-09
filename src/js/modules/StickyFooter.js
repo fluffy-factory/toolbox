@@ -1,6 +1,6 @@
 export class StickyFooter {
 
-  constructor(config) {
+  constructor (config) {
 
     let defaults = {
       elementSticky: document.querySelector('footer'),
@@ -10,61 +10,57 @@ export class StickyFooter {
     this.config = {...defaults, ...config};
     this.elementContainer = this.config.elementContainer;
     this.elementSticky = this.config.elementSticky;
+    this.stickyHeight = 0;
 
-    window.addEventListener('load', () => {
-      this.init();
-      this.elementContainer.style.marginBottom = StickyFooter.getHeightFooter(this.elementSticky);
-    });
+    this.init();
   }
 
   /**
-   * Execute callback after the delay
+   * Exec callback after a timeout of delay
    * @param {Function} callback
    * @param {Number} delay
    * @returns {Function}
-   * @private
    */
-  static debounce(callback, delay) {
+  static debounce (callback, delay) {
     let timer;
-    return () => {
+    return function (){
       let args = arguments;
       let context = this;
       clearTimeout(timer);
-      timer = setTimeout(function () {
+      timer = setTimeout(function(){
         callback.apply(context, args);
-      }, delay);
+      }, delay)
     }
   }
 
   /**
-   * Get height of footer in PX
-   * @param {Function} elementSticky
-   * @returns {Function}
-   * @private
+   * Return elementSticky's offsetHeight
+   * @returns {number}
    */
-  static getHeightFooter(elementSticky) {
-
-    let style = getComputedStyle(elementSticky);
+  getStickyHeight () {
+    let style = getComputedStyle(this.elementSticky);
     let position = style.position;
 
     if (position !== 'sticky') {
-      return elementSticky.offsetHeight + 'px';
+      return this.elementSticky.offsetHeight;
     }
   }
 
   /**
-   * Set height of footer when user resize the browser
-   * @param {Function} elementSticky
-   * @param {Function} elementContainer
-   * @private
+   * Set elementSticky's offsetHeight to elementContainer
+   * @param value
    */
-  static setHeightFooter(elementSticky, elementContainer) {
-    window.addEventListener('resize', StickyFooter.debounce(() => {
-      elementContainer.style.marginBottom = StickyFooter.getHeightFooter(elementSticky);
-    }, 100));
+  setStickyHeight (value) {
+    this.elementContainer.style.marginBottom = `${value}px`;
   }
 
   init() {
-    StickyFooter.setHeightFooter(this.elementSticky, this.elementContainer);
+    window.addEventListener('load', () => this.update());
+    window.addEventListener('resize', StickyFooter.debounce(() => this.update(), 100));
+  }
+
+  update () {
+    this.stickyHeight = this.getStickyHeight();
+    this.setStickyHeight(this.stickyHeight);
   }
 }

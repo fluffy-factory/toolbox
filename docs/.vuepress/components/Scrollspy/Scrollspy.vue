@@ -39,7 +39,7 @@
             target.classList.remove('is-active');
           },
           clickCallback: ({targetOffset}) => {
-            //Velocity(document.body, 'scroll', {offset: targetOffset - 60, duration: 1000});
+            Velocity(document.body, 'scroll', {offset: targetOffset - 60, duration: 1000});
           }
         });
         scrollspy.init();
