@@ -56,7 +56,6 @@ export class StickyFooter {
    * Set height of footer when user resize the browser
    * @param {Function} elementSticky
    * @param {Function} elementContainer
-   * @param {Function} stickyCss
    * @private
    */
   static setHeightFooter(elementSticky, elementContainer) {
