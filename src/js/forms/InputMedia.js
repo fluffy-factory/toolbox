@@ -1,8 +1,3 @@
-/**
- * Set attribute required on input file
- * @param {String} element
- * @param {Boolean} drag
- */
 export class InputMedia {
   constructor(config) {
     let defaults = {
@@ -13,7 +8,12 @@ export class InputMedia {
     this.init();
   }
 
-  //Get Multiple listener in one function
+  /**
+   * Get Multiple listener in one function
+   * @param {HTMLElement} element
+   * @param {string} eventNames
+   * @param {function} listener
+   */
   static addListener(element, eventNames, listener) {
     let events = eventNames.split(' ');
     for (let i = 0, iLen = events.length; i < iLen; i++) {
@@ -21,7 +21,11 @@ export class InputMedia {
     }
   }
 
-  //Load image when user drop it
+  /**
+   * Load image when user drop it
+   * @param {HTMLElement} $label
+   * @param {event} e
+   */
   static dropLoadImg($label, e) {
     $label.style.backgroundImage = null;
 
@@ -33,7 +37,10 @@ export class InputMedia {
     }
   }
 
-  //Add and remove class on drag and drop
+  /**
+   * Add and remove class on drag and drop
+   * @param {HTMLHtmlElement} $label
+   */
   static dragAndDrop($label) {
     InputMedia.addListener($label, 'drop dragover dragleave', (e) => {
       e.preventDefault();
