@@ -1,7 +1,7 @@
 # setRequiredFields()
 
 Set some required fields to required or not.  
-For [example](../modules/foldable.html#change-event) is usefull when you must show many fields when you checked a checkbox in a form.
+For [example](../modules/foldable.html#change-event) is useful when you must show many fields when you checked a checkbox in a form.
 
 ```js
 /**

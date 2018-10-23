@@ -13,7 +13,7 @@
 
 ## Custom
 :::warning
-For the correct operation of the custom fields, not change the location of the `HTML`.
+These custom fields require the same HTML structure to work properly.
 :::
 
 <br>
@@ -30,7 +30,7 @@ For the correct operation of the custom fields, not change the location of the `
 
 ## Material
 :::warning
-For the correct operation of the custom fields, not change the location of the `HTML`.
+These custom fields require the same HTML structure to work properly.
 :::
 
 <br>
@@ -47,7 +47,7 @@ For the correct operation of the custom fields, not change the location of the `
 <<< @/src/scss/components/input/_material.scss
 
 :::warning
-For optimal operation add [MaterialInput.js](/javascript/forms/materialinput.html)
+To have the best results, add [MaterialInput.js](/javascript/forms/materialinput.html)
 :::
 
 ## View password
@@ -55,11 +55,11 @@ For optimal operation add [MaterialInput.js](/javascript/forms/materialinput.htm
 <Input-Password></Input-Password>
 
 :::tip
-Work with the same design of Material and Custom input
+Works with the same design of Material and Custom input
 :::
 
 :::warning
-For optimal operation add [ShowPassword.js](/javascript/forms/showpassword.html)
+To have the best results, add [ShowPassword.js](/javascript/forms/showpassword.html)
 :::
 
 ```html

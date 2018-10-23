@@ -8,7 +8,7 @@
 
         <div v-if="type === 'success'" class="box-success">
             <p>
-                Success message !
+                Success message!
             </p>
         </div>
 
@@ -20,7 +20,7 @@
 
         <div v-if="type === 'error'" class="box-error">
             <p>
-                Error message !
+                Error message!
             </p>
         </div>
     </div>

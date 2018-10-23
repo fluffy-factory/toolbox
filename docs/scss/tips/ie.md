@@ -8,7 +8,7 @@ Media queries for IE10+ and IE11
 }
 ```
 
-or you can use mixin 
+or you can use this mixin:
 
 ```scss
 @include media-for($ie) {
