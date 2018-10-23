@@ -17,7 +17,7 @@ You can test it right now.
 **How to use:**
 ```js
 new Konami(() => {
-  alert('Wow you know the Konami code, i am proud of you.');
+  alert('Wow you know the Konami code, I am proud of you.');
 });
 ```
 

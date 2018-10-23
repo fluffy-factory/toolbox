@@ -1,1 +1,1 @@
-# scss components
+# SCSS components
