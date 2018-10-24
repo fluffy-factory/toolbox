@@ -1,9 +1,5 @@
 @mixin col () {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  flex-grow: 1;
-  flex-basis: 100%;
+  flex: 1 1 100%;
   max-width: 100%;
 }
 

@@ -1,6 +1,9 @@
 # Grid 
 
-A flexbox grid system with some helper classes for `alignment`, `space distribution` ...
+A flexbox grid system with some helper classes for `alignment`, `space distribution` ...  
+ - [grid.scss](https://github.com/fluffy-factory/toolbox/blob/master/src/scss/layout/_grid.scss)
+ - [See IE bugs](https://github.com/philipwalton/flexbugs)
+
 
 ## Base 
 Arguments defaults:
@@ -14,7 +17,7 @@ Arguments defaults:
 <Grid-base></Grid-base>
 
 ```html
-<div class="grid grid-collapse">
+<div class="grid-collapse">
 	<div class="col-s-7">
 		<div>...</div>
 	</div>
@@ -44,7 +47,7 @@ $grid-breakpoints: (
 <Grid-nested></Grid-nested>
 
 ```html
-<div class="grid grid-collapse">
+<div class="grid-collapse">
 	<div class="col-s-12">
 		<div>
 			<div class="grid grid-collapse">

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="bg-grey">
-            <div class="grid grid-collapse">
+            <div class="grid-collapse">
                 <div class="col-6">
                     <div></div>
                 </div>
@@ -12,7 +12,7 @@
 
             <br>
 
-            <div class="grid grid-collapse">
+            <div class="grid-collapse">
                 <div class="col-3">
                     <div></div>
                 </div>
@@ -29,7 +29,7 @@
 
             <br>
 
-            <div class="grid grid-collapse">
+            <div class="grid-collapse">
                 <div class="col-4">
                     <div></div>
                 </div>
@@ -46,7 +46,7 @@
 
             <br>
 
-            <div class="grid grid-collapse">
+            <div class="grid-collapse">
                 <div class="col-5">
                     <div></div>
                 </div>
