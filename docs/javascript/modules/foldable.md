@@ -70,7 +70,7 @@ You can use Foldable to toggle an element in forms if you need it.
 <Foldable-change-event></Foldable-change-event>
 
 **Example with Velocity.js**  
-In this example we use [setRequiredFields()](../utils/setRequiredFields) to manage required fields.
+In this example we use [setRequiredFields()](../utils/setRequiredFields.html) to manage required fields.
 ```js {6,13}
 const foldableChange = new Foldable({
 	eventType: 'change',
