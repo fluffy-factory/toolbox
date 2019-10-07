@@ -21,4 +21,8 @@ new Konami(() => {
 });
 ```
 
+***Exemple of site with konami code***
+* [Krav maga](https://kmct57.com/)
+* [Plugandcom](https://plugandcom.com)
+
 <Konami></Konami>
