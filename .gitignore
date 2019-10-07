@@ -1,5 +1,15 @@
 .idea
 .vscode
 node_modules
+/node_modules/
 /docs/.vuepress/dist/
 /docs/.vuepress/public/fonts/
+
+# SASS #
+**/.map
+**/.sass-cache
+**/.sass-cache/*
+
+# OS generated #
+**.DS_Store*
+._*
