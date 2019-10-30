@@ -75,6 +75,7 @@ module.exports = {
             'utils/setRequiredFields',
             'utils/debounce',
             'utils/throttle',
+            'utils/cookies',
           ]
         }],
         '/devtools/': [
