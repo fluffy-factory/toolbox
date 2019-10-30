@@ -1,0 +1,107 @@
+$spaces: (10, 20, 30, 40);
+$negativeSpaces: (-10, -20, -30, -40);
+$textSizes: (('', $font-size-base), ('small', $font-size-small), ('medium', $font-size-middle), ('large', $font-size-big));
+$breakpoints: (('s', $screen-s), ('m', $screen-m), ('l', $screen-l));
+
+/*
+  Margin and padding
+*/
+@each $space in $spaces {
+  // Margin
+  .m-#{$space} { margin: $space + unquote('px'); }
+  .mt-#{$space} { margin-top: $space + unquote('px'); }
+  .mr-#{$space} { margin-right: $space + unquote('px'); }
+  .mb-#{$space} { margin-bottom: $space + unquote('px'); }
+  .ml-#{$space} { margin-left: $space + unquote('px'); }
+
+  // Padding
+  .p-#{$space} { padding: $space + unquote('px'); }
+  .pt-#{$space} { padding-top: $space + unquote('px'); }
+  .pr-#{$space} { padding-right: $space + unquote('px'); }
+  .pb-#{$space} { padding-bottom: $space + unquote('px'); }
+  .pl-#{$space} { padding-left: $space + unquote('px'); }
+
+  @each $breakpoint in $breakpoints {
+    @media screen and (min-width: nth($breakpoint, 2)) {
+      // Margin
+      .m-#{nth($breakpoint, 1)}-#{$space} { margin: $space + unquote('px'); }
+      .mt-#{nth($breakpoint, 1)}-#{$space} { margin-top: $space + unquote('px'); }
+      .mr-#{nth($breakpoint, 1)}-#{$space} { margin-right: $space + unquote('px'); }
+      .mb-#{nth($breakpoint, 1)}-#{$space} { margin-bottom: $space + unquote('px'); }
+      .ml-#{nth($breakpoint, 1)}-#{$space} { margin-left: $space + unquote('px'); }
+
+      // Padding
+      .p-#{nth($breakpoint, 1)}-#{$space} { padding: $space + unquote('px'); }
+      .pt-#{nth($breakpoint, 1)}-#{$space} { padding-top: $space + unquote('px'); }
+      .pr-#{nth($breakpoint, 1)}-#{$space} { padding-right: $space + unquote('px'); }
+      .pb-#{nth($breakpoint, 1)}-#{$space} { padding-bottom: $space + unquote('px'); }
+      .pl-#{nth($breakpoint, 1)}-#{$space} { padding-left: $space + unquote('px'); }
+    }
+  }
+
+}
+
+/*
+  Margin and padding with negative values
+*/
+@each $negativeSpace in $negativeSpaces {
+  // Margin
+  .m-n-#{$negativeSpace} { margin: $negativeSpace + unquote('px'); }
+  .mt-n-#{$negativeSpace} { margin-top: $negativeSpace + unquote('px'); }
+  .mr-n-#{$negativeSpace} { margin-right: $negativeSpace + unquote('px'); }
+  .mb-n-#{$negativeSpace} { margin-bottom: $negativeSpace + unquote('px'); }
+  .ml-n-#{$negativeSpace} { margin-left: $negativeSpace + unquote('px'); }
+
+  // Padding
+  .p-n-#{$negativeSpace} { padding: $negativeSpace + unquote('px'); }
+  .pt-n-#{$negativeSpace} { padding-top: $negativeSpace + unquote('px'); }
+  .pr-n-#{$negativeSpace} { padding-right: $negativeSpace + unquote('px'); }
+  .pb-n-#{$negativeSpace} { padding-bottom: $negativeSpace + unquote('px'); }
+  .pl-n-#{$negativeSpace} { padding-left: $negativeSpace + unquote('px'); }
+
+  @each $breakpoint in $breakpoints {
+    @media screen and (min-width: nth($breakpoint, 2)) {
+      // Margin
+      .m-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { margin: $negativeSpace + unquote('px'); }
+      .mt-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { margin-top: $negativeSpace + unquote('px'); }
+      .mr-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { margin-right: $negativeSpace + unquote('px'); }
+      .mb-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { margin-bottom: $negativeSpace + unquote('px'); }
+      .ml-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { margin-left: $negativeSpace + unquote('px'); }
+
+      // Padding
+      .p-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { padding: $negativeSpace + unquote('px'); }
+      .pt-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { padding-top: $negativeSpace + unquote('px'); }
+      .pr-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { padding-right: $negativeSpace + unquote('px'); }
+      .pb-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { padding-bottom: $negativeSpace + unquote('px'); }
+      .pl-n-#{nth($breakpoint, 1)}-#{$negativeSpace} { padding-left: $negativeSpace + unquote('px'); }
+    }
+  }
+
+}
+
+/*
+  Text
+*/
+@each $textSize in $textSizes {
+  .text-#{nth($textSize, 1)} { font-size: nth($textSize, 2); }
+  .text-#{nth($textSize, 1)} { font-size: nth($textSize, 2); }
+  .text-left { text-align: left; }
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+
+  @each $breakpoint in $breakpoints {
+    @media screen and (min-width: nth($breakpoint, 2)) {
+      .text-#{nth($breakpoint, 1)}-#{nth($textSize, 1)} { font-size: nth($textSize, 2); }
+      .text-#{nth($breakpoint, 1)}-left { text-align: left; }
+      .text-#{nth($breakpoint, 1)}-center { text-align: center; }
+      .text-#{nth($breakpoint, 1)}-right { text-align: right; }
+    }
+  }
+}
+
+// Text transform ans style
+.lowercase { text-transform: lowercase; }
+.uppercase { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+.italic { font-style: italic; }
+
