@@ -14,3 +14,14 @@ export function setCookie(name, value, path ='/', secure) {
   var _secure = secure ? ' secure;' : '';
   document.cookie = _nameValue + _date + _path + _secure;
 }
+
+/**
+ * Get Cookie's value
+ * @param {string} name
+ * @returns {string}
+ */
+export function getCookie(name) {
+  var value = '; ' + document.cookie;
+  var parts = value.split('; ' + name + '=');
+  return parts.length < 2 ? undefined : parts.pop().split(';').shift();
+}
