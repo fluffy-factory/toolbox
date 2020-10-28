@@ -1,6 +1,6 @@
 module.exports = {
   theme: '',
-  title: ' Toolbox',
+  title: '',
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
@@ -37,6 +37,13 @@ module.exports = {
             'forms/checkboxes-radios',
             'forms/input',
             'forms/inputfile',
+          ]
+        },
+        {
+          title: 'Helpers',
+          collapsable: true,
+          children: [
+            'helpers/spacing'
           ]
         },
         {
