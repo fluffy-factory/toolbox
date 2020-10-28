@@ -43,7 +43,8 @@ module.exports = {
           title: 'Helpers',
           collapsable: true,
           children: [
-            'helpers/spacing'
+            'helpers/spacing',
+            'helpers/display'
           ]
         },
         {
