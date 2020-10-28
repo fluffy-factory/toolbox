@@ -1,0 +1,24 @@
+//___ Display
+$displays: ('block', 'flex', 'inline-block', 'inline');
+$breakpoints: (
+  's': 640px,
+  'm': 768px,
+  'l': 1024px,
+  'xl': 1344px,
+);
+
+@each $display in $displays {
+  .d-#{$display} {
+    display: #{$display};
+  }
+}
+
+@each $bp-k, $bp-v in $breakpoints {
+  @media screen and (min-width: $bp-v) {
+    @each $display in $displays {
+      .d-#{$display}-#{$bp-k} {
+        display: #{$display};
+      }
+    }
+  }
+}
