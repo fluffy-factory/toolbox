@@ -31,7 +31,7 @@
     "resolve-url-loader": "^2.3.0",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
-    "vuepress": "^0.13.0",
+    "vuepress": "^1.7.1",
     "webfonts-generator": "^0.4.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0",
